@@ -1,0 +1,76 @@
+\documentclass[letterpaper, 10pt]{article}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{ifthen}
+\usepackage{graphics}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=black}
+
+% Define custom commands
+\newcommand{\resumeItem}[2]{\item{#1}#2\hfill}
+\newcommand{\resumeSubheading}[4]{\vspace{2pt}\item[]\textbf{#1} \hfill #2 \\ \emph{#3}, #4}
+
+% Start document
+\begin{document}
+
+% Personal Information
+\hfill
+\begin{tabular*}{0.9\textwidth}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Muhammed Said Altan} & \href{https://saidaltan.com}{saidaltan.com}\\
+Ottawa, ON, Canada & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com}\\
+\href{https://linkedin.com/in/saidaltan}{linkedin.com/in/saidaltan} & \href{https://github.com/altansaid}{github.com/altansaid}\\
+\end{tabular*}
+\vspace{2pt}
+
+\section*{Education}
+\resumeSubheading{Diploma in Web Development and Internet Applications}{Apr 2025}{Algonquin College}{Ottawa, Canada}
+
+\section*{Work Experience}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeSubheading{Web Developer Intern}{Sep 2024 -- Dec 2024}{Solace}{Ottawa, Canada}
+    \begin{itemize}
+        \resumeItem{Developed Reusable Components}
+        {Created a reusable JavaScript/jQuery Table of Contents plugin to enhance user navigation in enterprise knowledge bases, resulting in a 42\% reduction in bounce rates.}
+        \resumeItem{Performance and Accessibility}
+        {Improved SEO and accessibility by addressing Lighthouse audit findings, consistently exceeding a 90+ benchmark score.}
+        \resumeItem{Scalable Web Applications}
+        {Collaborated in full-stack development integrating RESTful services with frontend components, improving application scalability and performance adherence.}
+        \resumeItem{Agile Collaboration}
+        {Worked with globally distributed teams in Agile sprints, contributing to CI/CD workflows and maintaining high code quality through peer reviews.}
+    \end{itemize}
+\end{itemize}
+
+\section*{Projects}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeSubheading{PLAB2 Practice Platform}{}{}{}
+    \begin{itemize}
+        \resumeItem{Real-time Collaboration}
+        {Implemented a real-time collaborative platform enabling role-based (Doctor, Patient, Observer) practice sessions, supporting 500+ users.}
+        \resumeItem{Secure Architecture}
+        {Developed secure authentication with JWT-based Spring Security, ensuring protected endpoint access. Used Spring Boot and Dockerized configurations for scalable deployment.}
+    \end{itemize}
+
+    \resumeSubheading{Interview Coach AI}{}{}{}
+    \begin{itemize}
+        \resumeItem{AI-driven Interview Preparation}
+        {Built a MERN stack platform utilizing Google's Gemini AI API to generate personalized interview questions, enhancing user preparation.}
+        \resumeItem{Responsive and Accessible Design}
+        {Created a modern mobile-friendly UI with React and TailwindCSS, ensuring accessibility and responsive design aligned with WCAG standards.}
+    \end{itemize}
+\end{itemize}
+
+\section*{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeItem{Languages}{JavaScript, TypeScript, Java, C\#, PHP, SQL}
+    \resumeItem{Frontend}{React, Redux, TailwindCSS, Material UI, Responsive Design, WCAG}
+    \resumeItem{Backend}{Node.js, Spring Boot, REST APIs, JWT/OAuth}
+    \resumeItem{Databases}{PostgreSQL, MongoDB, MySQL}
+    \resumeItem{Tools}{Docker, Git, Linux CLI}
+    \resumeItem{Cloud}{Render, Vercel, Google Cloud Platform}
+    \resumeItem{Practices}{Agile/Scrum, CI/CD, Unit Testing (Jest, JUnit)}
+\end{itemize}
+
+\end{document}
