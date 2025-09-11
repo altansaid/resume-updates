@@ -1,0 +1,123 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{setspace}
+
+\pagestyle{empty}
+\setlength{\tabcolsep}{0in}
+\setlength{\parindent}{0in}
+\setstretch{1}
+
+% Sections
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+
+% Resume item macros
+\newcommand{\resumeItem}[1]{\item{#1}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{2pt}\item
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \emph{#3} & \emph{#4} \\
+  \end{tabular*}\vspace{2pt}
+}
+\newcommand{\resumeProjectHeading}[3]{
+  \vspace{2pt}\item
+  \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} \textit{\small #2} & \small #3 \\
+  \end{tabular*}\vspace{2pt}
+}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, itemsep=2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\LARGE \textbf{Muhammed Said Altan}}\\
+    Ottawa, ON, Canada \,|\, \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \,|\, 
+    \href{https://saidaltan.com}{saidaltan.com} \,|\, 
+    \href{https://github.com/altansaid}{github.com/altansaid} \,|\, 
+    \href{https://linkedin.com/in/saidaltan}{linkedin.com/in/saidaltan}
+\end{center}
+
+%----------EDUCATION----------
+\section*{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Algonquin College}{Ottawa, Canada}
+    {Diploma in Web Development and Internet Applications}{Expected Apr 2025}
+\resumeSubHeadingListEnd
+
+%----------EXPERIENCE----------
+\section*{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Solace}{Ottawa, Canada}
+    {Web Developer Intern}{Sep 2024 -- Dec 2024}
+    \resumeItemListStart
+      \resumeItem{Integrated React/Gatsby components with RESTful services to deliver scalable knowledge-base features, improving responsiveness and page load performance.}
+      \resumeItem{Raised Lighthouse performance and accessibility scores to 90+ by fixing SEO issues and applying semantic HTML, ARIA roles, and WCAG-aligned patterns.}
+      \resumeItem{Engineered and deployed a reusable JavaScript/jQuery Table of Contents plugin across enterprise WordPress sites, improving navigation and reducing bounce rate by 42\%.}
+      \resumeItem{Resolved Node.js environment mismatches in the CI/CD pipeline, cutting build and deployment failures by 80\% and increasing reliability.}
+      \resumeItem{Collaborated in Agile sprints with a globally distributed team (Jira, code reviews, CI/CD), reinforcing maintainability and cross-functional delivery.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%----------LEADERSHIP----------
+\section*{Leadership}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {BodyBliss}{Ottawa, Canada}
+    {Capstone Project Developer}{Jan 2024 -- Apr 2024}
+    \resumeItemListStart
+      \resumeItem{Delivered a production-ready client website with custom design and responsive UI using Laravel and Livewire.}
+      \resumeItem{Collaborated with client to gather requirements, iterate on features, and deploy final solution.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%----------PROJECTS----------
+\section*{Projects}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {PLAB2 Practice Platform}{Spring Boot, React, TypeScript, PostgreSQL, WebSocket, Docker}{\href{https://plab2practice.com}{plab2practice.com} \,|\, \href{https://github.com/altansaid/plab2projectnew}{GitHub}}
+    \resumeItemListStart
+      \resumeItem{Built a real-time React + TypeScript frontend with Material-UI/Tailwind and WebSockets (STOMP) for synchronized Doctor/Patient/Observer practice sessions.}
+      \resumeItem{Designed modular Spring Boot REST APIs with JWT auth and role-based access; deployed on Render with PostgreSQL + Flyway for scalable cloud delivery.}
+      \resumeItem{Implemented WCAG-aligned, responsive UI and dashboards for session lifecycle and structured feedback management.}
+      \resumeItem{Containerized services and added CI/CD-ready configs to enable consistent local dev and rapid, reliable deployments.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {Interview Coach AI}{MERN (React 19, Node.js/Express, MongoDB), TailwindCSS}{\href{https://interviewcoach-ai.vercel.app/}{Live} \,|\, \href{https://github.com/altansaid/interviewcoach-ai}{GitHub}}
+    \resumeItemListStart
+      \resumeItem{Developed a cloud-native MERN application for AI-powered interview preparation with a responsive, accessible React + Tailwind UI.}
+      \resumeItem{Integrated Google Gemini API to generate tailored technical/behavioral questions with explanations, plus pinning and note-taking features.}
+      \resumeItem{Implemented secure auth with JWT, Google OAuth, bcrypt, and Nodemailer-based password reset; enforced CORS and route protection middleware.}
+      \resumeItem{Optimized UX with Framer Motion animations and Vite build tooling for fast, scalable web delivery.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%----------TECHNICAL SKILLS----------
+\section*{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, itemsep=2pt]
+  \item
+    \begin{tabularx}{\textwidth}{@{}l X@{}}
+      Languages: & JavaScript, TypeScript, Java, C\#, PHP, SQL, HTML5, CSS3 \\
+      Frontend: & React, Redux, TailwindCSS, Material UI, Bootstrap, Responsive Design, WCAG \\
+      Backend: & Node.js, Spring Boot, ASP.NET Core, Laravel, Livewire, REST APIs, JWT/OAuth \\
+      Databases: & PostgreSQL, MongoDB, MySQL \\
+      Tools: & Docker, Git, Linux CLI, NVM, Homebrew \\
+      Cloud: & Render, Vercel, Netlify, Google Cloud Platform, Supabase \\
+      Practices: & Agile/Scrum, CI/CD, Unit Testing (Jest, JUnit), Clean Architecture, Code Reviews \\
+    \end{tabularx}
+\end{itemize}
+
+\end{document}
