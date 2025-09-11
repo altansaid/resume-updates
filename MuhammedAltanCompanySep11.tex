@@ -1,0 +1,100 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{latexsym}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[empty]{fullpage}
+\usepackage{fontawesome}
+\usepackage{titlesec}
+\usepackage{textcomp}
+\usepackage{centernot}
+\usepackage{tikz}
+
+%--------------------------------------------------%
+%                  Personal Information            %
+%--------------------------------------------------%
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\begin{tabular}{l}
+  \textbf{\Large Muhammed Said Altan} \\
+  Ottawa, ON, Canada \\
+  \href{https://saidaltan.com}{https://saidaltan.com} \\
+  \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
+  \href{https://linkedin.com/in/saidaltan}{https://linkedin.com/in/saidaltan} \\
+  \href{https://github.com/altansaid}{https://github.com/altansaid}
+ \end{tabular}}
+\renewcommand{\headrulewidth}{0pt}
+%--------------------------------------------------%
+%                  Resume Title                    %
+%--------------------------------------------------%
+\titleformat{\section}{\color{MidnightBlue}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule]
+%--------------------------------------------------%
+%                  Overall Formatting              %
+%--------------------------------------------------%
+\setlength{\tabcolsep}{0em}
+\setlength{\headheight}{15pt}
+\setlength{\parindent}{0pt}
+\textheight=700px
+%--------------------------------------------------%
+%                  Document Start                  %
+%--------------------------------------------------%
+\begin{document}
+
+%--------------------------------------------------%
+%                     Education                    %
+%--------------------------------------------------%
+\section{Education}
+\begin{tabular}{ll}
+\textbf{Diploma in Web Development and Internet Applications} & \hfill Ottawa, Canada \\
+Algonquin College & \hfill Apr 2025 \\
+\end{tabular}
+
+%--------------------------------------------------%
+%                Work Experience                   %
+%--------------------------------------------------%
+\section{Experience}
+\resumeSubheading
+{Web Developer Intern}{Solace}
+{Ottawa, Canada}{September 2024 - December 2024}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \item \textbf{Enhanced navigation} by developing a JavaScript/jQuery Table of Contents plugin for enterprise knowledge bases, resulting in a 42\% reduction in bounce rate.
+    \item \textbf{Improved SEO and accessibility} by addressing audit findings, raising Lighthouse scores to consistently exceed 90+.
+    \item \textbf{Increased engagement} by creating an internal microsite using PHP, REST APIs, and Bootstrap, boosting participation by 50\%.
+    \item \textbf{Resolved CI/CD issues} in Node.js environments, decreasing build failures by 80\% and enhancing reliability.
+    \item \textbf{Integrated RESTful services} with React components to improve scalability and performance.
+\end{itemize}
+
+%--------------------------------------------------%
+%                     Projects                     %
+%--------------------------------------------------%
+\section{Projects}
+\textbf{PLAB2 Practice Platform}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \item Developed real-time role-based practice sessions for medical exam preparation, optimizing collaboration.
+    \item Implemented secure authentication with JWT, and ensured scalable deployments via Docker and Render.
+    \item Built responsive frontend using React and TypeScript, ensuring WCAG-compliant accessibility.
+\end{itemize}
+
+\textbf{Interview Coach AI}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \item Created full-stack interview preparation platform using React and Node.js, integrating AI for tailored question generation.
+    \item Enhanced user experience with JWT for secure authentication and features for effective preparation management.
+\end{itemize}
+
+%--------------------------------------------------%
+%                  Technical Skills                %
+%--------------------------------------------------%
+\section{Technical Skills}
+\begin{tabular}{ l l }
+Languages: & JavaScript, TypeScript, Java, PHP, SQL, HTML5, CSS3 \\
+Frontend: & React, Responsive Design, WCAG, TailwindCSS, Material-UI \\
+Backend: & Node.js, REST APIs, JWT/OAuth \\
+Databases: & PostgreSQL, MongoDB, MySQL \\
+Tools: & Docker, Git, Linux CLI \\
+Cloud: & Render, Vercel \\
+Practices: & Agile/Scrum, CI/CD, Code Reviews \\
+\end{tabular}
+
+\end{document}
