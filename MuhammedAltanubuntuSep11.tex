@@ -1,0 +1,108 @@
+\documentclass[letterpaper, 10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\setlength{\footskip}{8.0pt}
+\setlength{\voffset}{-0.3in}
+\setlength{\oddsidemargin}{-0.37in}
+\setlength{\evensidemargin}{-0.37in}
+\setlength{\textwidth}{7.0in}
+\setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{10.0in}
+\setlength{\headheight}{13.6pt}
+\setlength{\headsep}{15.0pt}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1{: #2} \vspace{-4pt}}}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+\newcommand{\resumeSubItemListStart}{\begin{itemize}}
+\newcommand{\resumeSubItemListEnd}{\end{itemize}}
+
+\newcommand{\section}[1]{\vspace{10pt}\textbf{\large{#1}}}
+
+\begin{document}
+
+\section{\centerline{Muhammed Said Altan}}
+\centerline{
+  \href{mailto:altansaid13@outlook.com}{\underline{altansaid13@outlook.com}} \ $|$ \
+  \href{https://linkedin.com/in/saidaltan}{\underline{linkedin.com/in/saidaltan}} \ $|$ \
+  \href{https://saidaltan.com}{\underline{saidaltan.com}} \ $|$ \
+  \href{https://github.com/altansaid}{\underline{github.com/altansaid}}
+}
+\vspace{-8pt}
+
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Algonquin College}{Ottawa, Canada}
+    {Diploma in Web Development and Internet Applications}{Apr 2025}
+\resumeSubHeadingListEnd
+
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Web Developer Intern}{Sep 2024 -- Dec 2024}
+    {Solace}{Ottawa, Canada}
+    \resumeItemListStart
+      \resumeItem{Enhanced a reusable JavaScript/jQuery plugin integrated into enterprise knowledge bases to boost navigation speed, simultaneously reducing the bounce rate by 42%.}
+      \resumeItem{Advanced SEO and accessibility standards by addressing audit findings, achieving scores consistently above 90+.}
+      \resumeItem{Built a scalable internal engagement microsite using React, PHP, and Bootstrap, increasing employee participation by 50% through modular content reuse and efficient REST API integration.}
+      \resumeItem{Resolved CI/CD Node.js environment mismatches, elevating deployment reliability by 80% through efficient pipeline management.}
+      \resumeItem{Integrated frontend components with RESTful services, ensuring secure and scalable code practices in Agile teams.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {PLAB2 Practice Platform}{}
+    {\href{https://plab2practice.com}{plab2practice.com} | \href{https://github.com/altansaid/plab2projectnew}{github.com/altansaid}}{}
+    \resumeItemListStart
+      \resumeItem{Developed a real-time collaborative platform using React and Spring Boot for PLAB 2 exam prep, with role-based session management, resulting in over 500 active users.}
+      \resumeItem{Implemented WebSockets for real-time synchronization and JWT-based security, enhancing live session reliability across distributed environments.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\section{Technical Skills}
+\resumeSubHeadingListStart
+  \resumeSubheading{}{Languages & Technologies}{}
+  \resumeSubItemListStart
+    \resumeSubItem{Languages}{JavaScript, TypeScript, Node.js, SQL}
+    \resumeSubItem{Frontend}{React, Responsive Design, WCAG, TailwindCSS}
+    \resumeSubItem{Backend}{REST APIs, Spring Boot, JWT/OAuth}
+    \resumeSubItem{Databases}{PostgreSQL, MongoDB}
+    \resumeSubItem{Tools}{Docker, Git, Agile/Scrum}
+    \resumeSubItem{Practices}{Scalable Web Application Development}
+  \resumeSubItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
