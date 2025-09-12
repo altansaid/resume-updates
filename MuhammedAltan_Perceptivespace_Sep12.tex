@@ -1,0 +1,158 @@
+\documentclass[letterpaper, 10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+
+\usepackage[colorlinks=false, pdfborder={0 0 0}]{hyperref}
+\usepackage[normalem]{ulem}
+
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\setlength{\columnsep}{-1pt}
+
+\usepackage[margin=1.4cm]{geometry}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.15in}
+\addtolength{\textwidth}{0.3in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large\bfseries}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\pdfgentounicode=1
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{0pt}}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]} 
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}} 
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Large \scshape Muhammed Said Altan} \\[2mm]
+    \footnotesize
+    (343) 988-3084 ~ 
+    altansaid13@outlook.com ~ 
+    \underline{\href{https://www.linkedin.com/in/altansaid/}{linkedin.com/in/altansaid}} ~ 
+    \underline{\href{https://github.com/altansaid}{github.com/altansaid}} ~ 
+    \underline{\href{https://saidaltan.com?utm_source=perceptivespace\&utm_medium=resume\&utm_campaign=job_application}{saidaltan.com}}
+    \vspace{-10pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.algonquincollege.com/sat/program/web-development-internet-applications/}{Algonquin College}}{April 2025}
+      {Web Development and Internet Applications | Dean's Honour List, \textbf{GPA: 3.77}}{Ottawa, ON}
+      \resumeItem{Completed courses in Front-End Development (HTML, CSS, React), UI/UX Design, Object-Oriented Programming (JavaScript, C\#), Software Development Lifecycle, Algorithms, and Network OS (Linux).} 
+
+  \resumeSubHeadingListEnd
+\vspace{-10pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{\href{https://solace.com/}{Solace}}{Sep 2024 -- Dec 2024}{Full Stack Web Developer Intern}{Ottawa, ON}
+\resumeItemListStart
+\resumeItem{Developed and deployed a reusable \textbf{JavaScript/jQuery} Table of Contents plugin, enhancing navigation speed and reducing bounce rate by \textbf{42\%}.}
+\resumeItem{Resolved \textbf{Node.js} environment mismatches, improving system performance and decreasing CI/CD pipeline failures by \textbf{80\%}.}
+\resumeItem{Increased employee engagement by 50\% by building an internal microsite with \textbf{PHP, REST APIs, and Bootstrap}, enabling modular content reuse.}
+\resumeItem{Integrated \textbf{RESTful services} with front-end components, optimizing application scalability and security.}
+\resumeItem{Facilitated Agile collaboration through backlog grooming, peer reviews, and CI/CD workflows with globally distributed teams.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+  
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading{\textbf{Real-Time Medical Exam Practice Platform}}
+{\href{\detokenize{https://plab2practice.com/?utm_source=perceptivespace\&utm_medium=resume\&utm_campaign=job_application}}{Live Demo} $|$ \href{https://github.com/altansaid/plab2projectnew}{GitHub}}
+\vspace{-5pt}
+\resumeItemListStart
+    \resumeItem{Facilitated collaborative learning with a real-time platform featuring role-based sessions in \textbf{React, TypeScript, and WebSockets}, serving \textbf{500+ active users}.}
+    
+    \resumeItem{Implemented secure \textbf{Spring Boot RESTful microservices} with \textbf{JWT authentication} and over 25 API endpoints, achieving government-standard security.}
+    
+    \resumeItem{Designed a \textbf{UI system} with Material-UI and Tailwind CSS, ensuring accessibility and compliance with WCAG responsive design standards.}
+ 
+    \resumeItem{Supported high concurrency through PostgreSQL, \textbf{Dockerized deployments}, and CI/CD-ready configurations for dependable cloud platforms.}
+\resumeItemListEnd
+
+\resumeSubHeadingListStart
+\resumeProjectHeading{\textbf{AI-Powered Interview Preparation App}}
+{\href{https://interviewcoach-ai.vercel.app}{Live Demo} $|$ \href{https://github.com/altansaid/interviewcoach-ai}{GitHub}}
+
+\resumeItemListStart
+    \resumeItem{Delivered a scalable full-stack platform using \textbf{React} and \textbf{Node.js}, integrating \textbf{Gemini AI APIs} for personalized interview questions, enhancing user engagement.}
+    
+    \resumeItem{Implemented \textbf{authentication and role-based access control} with \textbf{JWT, Google OAuth, and bcrypt} to bolster security compliance.}
+    
+    \resumeItem{Boosted deployment readiness and reliability through \textbf{unit/integration testing}, CI/CD pipelines, and containerized configurations.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------Leadership-----------
+\section{Leadership Experience}
+
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {\href{https://www.bodyblissliz.com/}{Bodyblissliz}}{Jan 2025 -- Apr 2025}
+  {Project Lead \& Full Stack Web Developer (Capstone Project)}{Ottawa, ON}
+  \vspace{1pt}
+  \resumeItemListStart
+     \resumeItem{Led a 3-person development team to redesign a client's small business website, delivering a fully responsive and accessible UI that improved mobile usability and aligned with business objectives.}
+    \resumeItem{Collaborated with the client to iteratively refine features, gathering feedback and implementing design changes to enhance customer satisfaction and optimize user experience.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+
+\section{Technical Skills}
+\resumeItemListStart
+  \resumeItem{\textbf{Languages:} Java, JavaScript, TypeScript, C{\#}, SQL, HTML5, CSS3}
+  \resumeItem{\textbf{Front-End:} React, Redux, TailwindCSS, Material UI, WebSockets, Responsive \& Accessible Design (WCAG)}
+  \resumeItem{\textbf{Back-End \& Cloud:} Spring Boot, Node.js, RESTful APIs, JWT/OAuth, Docker, Git, Linux, Azure \& GCP }
+  \resumeItem{\textbf{Quality \& Practices:} JUnit 5, Jest, React Testing Library, CI/CD Pipelines, Agile/Scrum, Code Reviews}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\end{document}
