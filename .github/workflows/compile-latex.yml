@@ -15,12 +15,35 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: ${{ inputs.filename }}
-          latexmk_use_xelatex: false
-          latexmk_shell_escape: true
+      - name: Find and compile all LaTeX files
+        run: |
+          # Install LaTeX packages
+          sudo apt-get update
+          sudo apt-get install -y texlive-full
+
+          echo "Compiling all .tex files found in repository..."
+          compiled=false
+
+          # Compile all .tex files
+          for texfile in *.tex; do
+            if [ -f "$texfile" ]; then
+              echo "📄 Found and compiling: $texfile"
+              if pdflatex -interaction=nonstopmode "$texfile"; then
+                echo "✅ Successfully compiled: $texfile → ${texfile%.tex}.pdf"
+                compiled=true
+              else
+                echo "❌ Failed to compile: $texfile"
+              fi
+            fi
+          done
+
+          if [ "$compiled" = false ]; then
+            echo "⚠️ No .tex files were successfully compiled"
+          fi
+
+          # List generated PDFs
+          echo "📄 Generated PDF files:"
+          ls -la *.pdf || echo "No PDF files found"
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
@@ -33,6 +56,6 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: "release-${{ github.run_number }}"
-          name: "Resume Release ${{ github.run_number }}"
+          name: "Resume & Cover Letter Release ${{ github.run_number }}"
           files: "*.pdf"
           generate_release_notes: false
