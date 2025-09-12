@@ -19,7 +19,11 @@ jobs:
       - name: Install LaTeX
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra
+          sudo apt-get install -y \
+            texlive-latex-base \
+            texlive-fonts-recommended \
+            texlive-latex-extra \
+            texlive-fonts-extra
 
       - name: Compile LaTeX
         run: |
@@ -28,17 +32,20 @@ jobs:
 
           if [ -f "$filename" ]; then
             echo "✅ File found: $filename"
-            
+
             # İlk compile
             pdflatex -interaction=nonstopmode "$filename"
             # İkinci compile (references için)
             pdflatex -interaction=nonstopmode "$filename"
 
             pdf_name="${filename%.tex}.pdf"
+
             if [ -f "$pdf_name" ]; then
               echo "✅ PDF successfully created: $pdf_name"
+              echo "PDF_NAME=$pdf_name" >> $GITHUB_ENV
             else
               echo "❌ PDF creation failed"
+              cat "${filename%.tex}.log" || true
               exit 1
             fi
           else
@@ -51,14 +58,14 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: compiled-resume
-          path: "${{ github.event.inputs.filename%.tex}.pdf }"
+          path: ${{ env.PDF_NAME }}
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: resume-${{ github.run_number }}-${{ github.event.inputs.filename }}
           name: Resume Release ${{ github.run_number }}
-          files: "${{ github.event.inputs.filename%.tex}.pdf }"
+          files: ${{ env.PDF_NAME }}
           body: |
             📄 Compiled resume: ${{ github.event.inputs.filename }}
             🕐 Generated: ${{ github.event.head_commit.timestamp }}
@@ -68,4 +75,5 @@ jobs:
 
       - name: Cleanup LaTeX files
         run: |
+          echo "🧹 Cleaning up LaTeX auxiliary files..."
           rm -f *.aux *.log *.out *.fls *.fdb_latexmk *.synctex.gz
