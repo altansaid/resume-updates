@@ -1,11 +1,10 @@
-
 name: Compile LaTeX to PDF
 
 on:
   workflow_dispatch:
     inputs:
       filename:
-        description: 'LaTeX filename to compile'
+        description: "LaTeX filename to compile"
         required: true
         type: string
 
@@ -15,17 +14,25 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
           root_file: ${{ inputs.filename }}
           latexmk_use_xelatex: false
           latexmk_shell_escape: true
-          
+
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: compiled-pdf
           path: "*.pdf"
           retention-days: 7
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: "release-${{ github.run_number }}"
+          name: "Resume Release ${{ github.run_number }}"
+          files: "*.pdf"
+          generate_release_notes: false
