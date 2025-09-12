@@ -28,40 +28,21 @@ jobs:
 
           if [ -f "$filename" ]; then
             echo "✅ File found: $filename"
-            ls -la "$filename"
             
             # İlk compile
-            echo "📝 First LaTeX compilation..."
             pdflatex -interaction=nonstopmode "$filename"
-            
             # İkinci compile (references için)
-            echo "📝 Second LaTeX compilation..."
             pdflatex -interaction=nonstopmode "$filename"
-            
-            # PDF dosyasının var olup olmadığını kontrol et
+
             pdf_name="${filename%.tex}.pdf"
             if [ -f "$pdf_name" ]; then
               echo "✅ PDF successfully created: $pdf_name"
-              ls -la "$pdf_name"
-              
-              # PDF dosyasının boyutunu kontrol et
-              pdf_size=$(stat -c%s "$pdf_name")
-              echo "📄 PDF size: $pdf_size bytes"
-              
-              if [ $pdf_size -gt 1000 ]; then
-                echo "✅ PDF size looks good"
-              else
-                echo "⚠️ PDF size might be too small"
-              fi
             else
               echo "❌ PDF creation failed"
-              echo "📋 LaTeX log:"
-              cat "${filename%.tex}.log" || echo "No log file found"
               exit 1
             fi
           else
             echo "❌ File $filename not found in repository"
-            echo "📂 Available .tex files:"
             find . -name "*.tex" -type f
             exit 1
           fi
@@ -70,21 +51,21 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: compiled-resume
-          path: "*.pdf"
+          path: "${{ github.event.inputs.filename%.tex}.pdf }"
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           tag_name: resume-${{ github.run_number }}-${{ github.event.inputs.filename }}
           name: Resume Release ${{ github.run_number }}
-          files: "*.pdf"
+          files: "${{ github.event.inputs.filename%.tex}.pdf }"
           body: |
             📄 Compiled resume: ${{ github.event.inputs.filename }}
             🕐 Generated: ${{ github.event.head_commit.timestamp }}
             🔧 Run: ${{ github.run_number }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Cleanup LaTeX files
         run: |
-          echo "🧹 Cleaning up LaTeX auxiliary files..."
           rm -f *.aux *.log *.out *.fls *.fdb_latexmk *.synctex.gz
