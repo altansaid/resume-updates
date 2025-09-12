@@ -1,60 +1,31 @@
-name: Compile LaTeX Resume
+
+name: Compile LaTeX to PDF
 
 on:
   workflow_dispatch:
     inputs:
       filename:
-        description: "LaTeX filename to compile"
+        description: 'LaTeX filename to compile'
         required: true
         type: string
 
 jobs:
   compile:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Install LaTeX
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            texlive-latex-base \
-            texlive-fonts-recommended \
-            texlive-latex-extra
-
-      - name: Compile LaTeX to PDF
-        run: |
-          filename="${{ github.event.inputs.filename }}"
-          echo "🔍 Compiling: $filename"
-          
-          if [ ! -f "$filename" ]; then
-            echo "❌ File not found: $filename"
-            exit 1
-          fi
-          
-          pdflatex -interaction=nonstopmode -halt-on-error "$filename"
-          pdflatex -interaction=nonstopmode -halt-on-error "$filename"
-          
-          pdf_name="${filename%.tex}.pdf"
-          if [ ! -f "$pdf_name" ]; then
-            echo "❌ PDF compilation failed"
-            exit 1
-          fi
-          
-          echo "PDF_NAME=$pdf_name" >> $GITHUB_ENV
-
-      - name: Create Release
-        uses: softprops/action-gh-release@v1
+        
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
         with:
-          tag_name: resume-${{ github.run_number }}-${{ github.event.inputs.filename }}
-          name: Resume ${{ github.run_number }}
-          files: ${{ env.PDF_NAME }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Cleanup
-        if: always()
-        run: rm -f *.aux *.log *.out *.fls *.fdb_latexmk *.synctex.gz
+          root_file: ${{ inputs.filename }}
+          latexmk_use_xelatex: false
+          latexmk_shell_escape: true
+          
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled-pdf
+          path: "*.pdf"
+          retention-days: 7
