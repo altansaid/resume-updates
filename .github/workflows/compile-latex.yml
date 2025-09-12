@@ -1,4 +1,4 @@
-name: Compile LaTeX to PDF
+name: Compile LaTeX and Create Release
 
 on:
   workflow_dispatch:
@@ -6,25 +6,42 @@ on:
       filename:
         description: 'LaTeX filename to compile'
         required: true
-        type: string
 
 jobs:
-  compile:
+  compile-latex:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Compile LaTeX
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: ${{ github.event.inputs.filename }}
         
-      - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: ${{ inputs.filename }}
-          latexmk_use_xelatex: false
-          latexmk_shell_escape: true
-          
-      - name: Upload PDF artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: compiled-pdf
-          path: "*.pdf"
-          retention-days: 7
+    - name: Get base filename
+      id: filename
+      run: |
+        BASENAME=$(basename "${{ github.event.inputs.filename }}" .tex)
+        echo "basename=${BASENAME}" >> $GITHUB_OUTPUT
+        
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: "resume-${{ steps.filename.outputs.basename }}-${{ github.run_number }}"
+        release_name: "Resume ${{ steps.filename.outputs.basename }}"
+        draft: false
+        prerelease: false
+        
+    - name: Upload PDF to Release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./${{ steps.filename.outputs.basename }}.pdf
+        asset_name: ${{ steps.filename.outputs.basename }}.pdf
+        asset_content_type: application/pdf
