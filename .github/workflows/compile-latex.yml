@@ -15,12 +15,24 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Cache LaTeX packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.texlive
+            /tmp/texlive
+            /usr/local/texlive
+          key: latex-${{ runner.os }}-${{ hashFiles('*.tex') }}
+          restore-keys: |
+            latex-${{ runner.os }}-
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
           root_file: ${{ inputs.filename }}
           latexmk_use_xelatex: false
           latexmk_shell_escape: true
+          args: -pdf -interaction=nonstopmode -halt-on-error
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
