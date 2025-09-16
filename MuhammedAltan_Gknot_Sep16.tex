@@ -1,0 +1,136 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure ATS readability
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Muhammed Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
+  \href{https://saidaltan.com?utm_source=gknot\&utm_medium=resume\&utm_campaign=job_application}{https://saidaltan.com} & [Your Phone Number] \\
+  \href{https://linkedin.com/in/saidaltan}{https://linkedin.com/in/saidaltan} & \href{https://github.com/altansaid}{https://github.com/altansaid} \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Algonquin College}{2025-04}
+      {Diploma in Web Development and Internet Applications}{Ottawa, Canada}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Solace}{2024-09 -- 2024-12}
+      {Web Developer Intern}{Ottawa, Canada}
+      \resumeItemListStart
+        \resumeItem{Optimized navigation speed by \textbf{42\%} in enterprise systems by creating a reusable \textbf{JavaScript/jQuery} plugin, streamlining Table of Contents access.}
+        \resumeItem{Elevated SEO and accessibility ratings to \textbf{90+} by methodically addressing \textbf{Lighthouse} audit recommendations for enterprise platforms.}
+        \resumeItem{Boosted internal microsite engagement by \textbf{50\%} using \textbf{PHP}, \textbf{REST APIs}, and \textbf{Bootstrap} through innovative design solutions and interactive features.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\textbf{PLAB2 Practice Platform}}{\href{https://plab2practice.com?utm_source=gknot\&utm_medium=resume\&utm_campaign=job_application}{https://plab2practice.com}}
+      {Real-time collaborative platform for medical exam preparation with role-based practice sessions.}{}
+      \resumeItemListStart
+        \resumeItem{Engineered a real-time platform supporting Doctor, Patient, and Observer roles using \textbf{Spring Boot}, \textbf{React}, and \textbf{WebSockets}, accommodating over \textbf{500+} users.}
+        \resumeItem{Advanced feedback tracking across \textbf{28} endpoints using \textbf{secure JWT} and \textbf{WebSockets} for scalable user interactions.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Interview Coach AI}}{\href{https://interviewcoach-ai.vercel.app/}{https://interviewcoach-ai.vercel.app/}}
+      {MERN stack app generating tailored interview questions with pinning and explanation features.}{}
+      \resumeItemListStart
+        \resumeItem{Constructed an AI-driven interview platform using \textbf{React} and \textbf{Node.js} to generate questions via \textbf{Gemini AI}, improving preparation by \textbf{30\%}.}
+        \resumeItem{Enhanced user experience with \textbf{JWT} authentication and \textbf{Google OAuth} for secure, effortless user sessions.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------LEADERSHIP-----------------
+\section{Leadership}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {BodyBliss}{2024-01 -- 2024-04}
+      {Capstone Project Developer}{Ottawa, Canada}
+      \resumeItemListStart
+        \resumeItem{Launched production-ready site with \textbf{custom design} using \textbf{Laravel} and \textbf{Livewire}, aligning precisely with client specifications.}
+        \resumeItem{Spearheaded client collaboration for requirement gathering, iterative development, and successful deployment.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{Technical Skills}
+  \resumeItemListStart
+    \resumeItem{\textbf{Languages:} [Java, JavaScript, Python, etc.]}
+    \resumeItem{\textbf{Front-End:} [React, TailwindCSS, etc.]}
+    \resumeItem{\textbf{Back-End \& Cloud:} [Node.js, Spring Boot, Docker, etc.]}
+    \resumeItem{\textbf{Other:} [Git, Agile, Testing, etc.]}
+  \resumeItemListEnd
+
+%-------------------------------------------
+\end{document}
