@@ -1,0 +1,131 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure ATS readability
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Muhammed Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
+  \href{https://saidaltan.com}{saidaltan.com} & (343) 988-3084 \\
+  \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid} & \href{https://github.com/altansaid}{github.com/altansaid} \\
+\end{tabular*}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.algonquincollege.com/sat/program/web-development-internet-applications/}{Algonquin College of Applied Arts and Technology}}{Apr 2025}
+      {Web Development and Internet Applications; Dean's Honour List, GPA: 3.77}{Ottawa, ON}
+  \resumeSubHeadingListEnd
+
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://solace.com}{Solace}}{Sep 2024 -- Dec 2024}
+      {Full Stack Web Developer Intern}{Ottawa, ON}
+      \resumeItemListStart
+        \resumeItem{Delivered reusable \textbf{JavaScript/jQuery} Table of Contents plugin at enterprise scale, reducing bounce rate by \textbf{42\%} through improved UX and internal navigation.}
+        \resumeItem{Improved \textbf{Lighthouse} SEO and accessibility scores to \textbf{90+} by remediating structural HTML issues using \textbf{React} and semantic markup across key pages.}
+        \resumeItem{Built responsive microsite using \textbf{PHP}, \textbf{Bootstrap}, and \textbf{REST APIs}, boosting cross-functional engagement by \textbf{50\%} through centralized service access.}
+        \resumeItem{Resolved \textbf{Node.js} version conflicts in \textbf{CI/CD} environments, reducing deployment failures by \textbf{80\%} and stabilizing release workflows.}
+        \resumeItem{Enhanced sprint productivity by collaborating in \textbf{Agile} standups, prioritizing backlog tasks, and participating in peer code reviews to improve delivery cadence.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\textbf{PLAB2 Practice Platform}}{\href{https://plab2practice.com}{Live Demo} | \href{https://github.com/altansaid/plab2projectnew}{GitHub}}
+      {Real-time Collaborative Practice Platform}{}
+      \resumeItemListStart
+        \resumeItem{Built real-time tool with \textbf{React}, \textbf{WebSockets}, and \textbf{Spring Boot}, enabling \textbf{500+} users to collaborate seamlessly with sub-\textbf{200ms} interaction latency.}
+        \resumeItem{Designed modular \textbf{JWT}-secured microservices with \textbf{60+ RESTful APIs}, improving scalability and maintainability of critical back-end systems.}
+        \resumeItem{Optimized deployment to \textbf{Render} and \textbf{Vercel} using \textbf{Docker}, \textbf{CI/CD} pipelines, and custom domain routing strategies.}
+        \resumeItem{Crafted accessible user interface using \textbf{TailwindCSS}, \textbf{Material UI}, and \textbf{WCAG} patterns to ensure inclusive usability across devices.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Interview Coach AI}}{\href{https://interviewcoach-ai.vercel.app}{Live Demo} | \href{https://github.com/altansaid/interviewcoach-ai}{GitHub}}
+      {Full-Stack Interview Prep Platform}{}
+      \resumeItemListStart
+        \resumeItem{Delivered full-stack \textbf{MERN} platform with \textbf{Gemini AI} integration to dynamically generate interview questions based on candidate inputs.}
+        \resumeItem{Secured user sessions with \textbf{JWT}, \textbf{Google OAuth}, and \textbf{bcrypt}, supporting multi-role authentication and encrypted access control.}
+        \resumeItem{Developed preparation tools including tracking dashboards, rich text note-taking, and pinning features to guide candidate readiness.}
+        \resumeItem{Implemented fully responsive UI using \textbf{TailwindCSS} and \textbf{Framer Motion}, meeting inclusive access standards via \textbf{WCAG} compliance.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Resume Tailoring Automation Workflow}}{\href{https://github.com/altansaid/resume-updates}{GitHub}}
+      {AI-Driven Application Targeting Pipeline}{}
+      \resumeItemListStart
+        \resumeItem{Automated LaTeX resume updates via \textbf{n8n} flows triggered from Slack, enriching outputs using \textbf{OpenAI} prompts and transformation logic.}
+        \resumeItem{Versioned resume changes using \textbf{GitHub REST API} with atomic \textbf{PUT} commits and \textbf{CI/CD} checks for structural validation.}
+        \resumeItem{Built LaTeX validation engine in \textbf{JavaScript} to serialize documents, verify layout syntax, and ensure seamless delivery on trigger.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+  \resumeItemListStart
+    \resumeItem{\textbf{Languages}}{Java, JavaScript, TypeScript, C\#, SQL, HTML5, CSS3}
+    \resumeItem{\textbf{Front-End}}{React, Redux, TailwindCSS, Material UI, WebSockets, Responsive \& Accessible Design (WCAG)}
+    \resumeItem{\textbf{Back-End \& Cloud}}{Spring Boot, Node.js, RESTful APIs, JWT/OAuth, Docker, Git, Linux, Azure \& GCP}
+    \resumeItem{\textbf{Quality \& Practices}}{JUnit 5, Jest, React Testing Library, CI/CD Pipelines, Agile/Scrum, Code Reviews}
+  \resumeItemListEnd
+
+\end{document}
