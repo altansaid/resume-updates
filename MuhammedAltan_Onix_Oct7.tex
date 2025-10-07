@@ -1,0 +1,140 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure ATS readability
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Muhammed Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
+  \href{https://saidaltan.com}{saidaltan.com} & (343) 988-3084 \\
+  \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid} & \href{https://github.com/altansaid}{github.com/altansaid} \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.algonquincollege.com/sat/program/web-development-internet-applications/}{Algonquin College of Applied Arts and Technology}}{Apr 2025}
+      {Web Development and Internet Applications; Dean's Honour List, GPA: 3.77}{Ottawa, ON}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://solace.com}{Solace}}{Sep 2024 -- Dec 2024}
+      {Full Stack Web Developer Intern}{Ottawa, ON}
+      \resumeItemListStart
+        \resumeItem{Reduced bounce rate by \textbf{42\%} across enterprise sites by developing reusable \textbf{JavaScript/jQuery} Table of Contents plugin improving in-page navigation and engagement.}
+        \resumeItem{Resolved \textbf{Node.js} build chain version conflicts, reducing \textbf{CI/CD} deployment failures by \textbf{80\%} and accelerating production delivery cycles.}
+        \resumeItem{Improved accessibility and SEO Lighthouse scores to \textbf{90+} by fixing structural \textbf{HTML} issues and streamlining content workflows.}
+        \resumeItem{Boosted internal engagement by \textbf{50\%} through launch of microsite using \textbf{PHP}, \textbf{Bootstrap}, and \textbf{REST APIs} for dynamic interaction.}
+        \resumeItem{Enhanced interface consistency across internal tools using \textbf{Figma}, \textbf{Adobe Photoshop}, and \textbf{Illustrator} to iterate UI/UX designs.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\textbf{Interview Coach AI}}{\href{https://interviewcoach-ai.vercel.app}{Live Demo} | \href{https://github.com/altansaid/interviewcoach-ai}{GitHub}}
+      {Full-Stack Interview Prep Platform}{}
+      \resumeItemListStart
+        \resumeItem{Built personalized question engine using \textbf{React}, \textbf{Node.js}, and \textbf{Gemini AI}, generating \textbf{dynamic content} customized to user-provided input.}
+        \resumeItem{Integrated secure \textbf{JWT} and \textbf{Google OAuth} auth system with email-password reset for streamlined user onboarding experience.}
+        \resumeItem{Improved cross-device accessibility using \textbf{TailwindCSS} and \textbf{Framer Motion}, delivering WCAG-compliant responsive UI.}
+        \resumeItem{Maintained code base reliability using modular \textbf{REST APIs}, \textbf{CI/CD} pipelines, and Dockerized architecture.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{PLAB2 Practice Platform}}{\href{https://plab2practice.com}{Live Demo} | \href{https://github.com/altansaid/plab2projectnew}{GitHub}}
+      {Real-time Collaborative Practice Platform}{}
+      \resumeItemListStart
+        \resumeItem{Supported \textbf{500+ users} in doctor-patient simulations using \textbf{React}, \textbf{WebSockets}, and \textbf{Spring Boot} stack.}
+        \resumeItem{Achieved real-time session sync under \textbf{200ms latency} using \textbf{WebSocket STOMP} protocol managing multi-role interaction.}
+        \resumeItem{Created WCAG-compliant UI using \textbf{TailwindCSS}, \textbf{Material UI}, and dynamic \textbf{TypeScript} components.}
+        \resumeItem{Scaled services by deploying microservices with \textbf{Docker} and \textbf{PostgreSQL} via \textbf{Render} and \textbf{Vercel}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Resume Tailoring Automation Workflow}}{\href{}{GitHub} | \href{https://github.com/altansaid/resume-updates}{GitHub}}
+      {AI-Integrated Resume Optimization Workflow}{}
+      \resumeItemListStart
+        \resumeItem{Automated LaTeX resume generation using \textbf{n8n}, \textbf{Slack}, and \textbf{OpenAI GPT}, triggered dynamically from job descriptions.}
+        \resumeItem{Generated tailored bullet points merging resume structure with contextual inference for consistent \textbf{X-Y-Z} achievement formatting.}
+        \resumeItem{Versioned compiled resume PDFs through GitHub commits via \textbf{REST APIs}, Base64 encoding, and structured JSON.}
+        \resumeItem{Validated documents for \textbf{LaTeX} syntax pre-deployment, ensuring error-free formats in all saved versions.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{Technical Skills}
+  \resumeItemListStart
+    \resumeItem{\textbf{Languages}}{Java, JavaScript, TypeScript, C\#, SQL, HTML5, CSS3}
+    \resumeItem{\textbf{Front-End}}{React, Redux, TailwindCSS, Material UI, WebSockets, Responsive \& Accessible Design (WCAG)}
+    \resumeItem{\textbf{Back-End \& Cloud}}{Spring Boot, Node.js, RESTful APIs, JWT/OAuth, Docker, Git, Linux, Azure \& GCP}
+    \resumeItem{\textbf{Quality \& Practices}}{JUnit 5, Jest, React Testing Library, CI/CD Pipelines, Agile/Scrum, Code Reviews}
+  \resumeItemListEnd
+
+%-------------------------------------------
+\end{document}
