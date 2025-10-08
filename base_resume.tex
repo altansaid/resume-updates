@@ -1,8 +1,3 @@
-%-------------------------
-% Resume in LaTeX
-% Based on sb2nov/resume
-%------------------------
-
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
@@ -24,7 +19,6 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -36,17 +30,13 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Section formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure ATS readability
 \pdfgentounicode=1
 
-% Custom commands
 \newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
-
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -54,28 +44,81 @@
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-5pt}
 }
-
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
 \renewcommand{\labelitemii}{$\circ$}
-
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-%----------HEADING-----------------
+%----------HEADER----------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Large Muhammed Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
+  \textbf{\Large Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
   \href{https://saidaltan.com}{saidaltan.com} & (343) 988-3084 \\
   \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid} & \href{https://github.com/altansaid}{github.com/altansaid} \\
 \end{tabular*}
 
-%-----------EDUCATION-----------------
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://arbitragecyclops.com/}{Arbitrage Cyclops}}{Jul 2025 -- Present}
+      {Software Developer}{Remote}
+      \resumeItemListStart
+        \resumeItem{Contributed to full-stack development of internal tools, building reusable \textbf{React} components and optimizing backend \textbf{Node.js/Go} APIs for performance and scalability.}
+        \resumeItem{Optimized Firestore indexing and asynchronous API queries, achieving a \textbf{70\% reduction in latency} for throughput-critical analytics pipelines.}
+        \resumeItem{Built and tested feature prototypes emphasizing \textbf{scalability} and \textbf{performance}, processing up to \textbf{1000+ data records/hour}.}
+        \resumeItem{Developed and debugged reusable \textbf{React} components for real-time dashboards, ensuring consistent performance under heavy client-server interaction.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://solace.com}{Solace}}{Sep 2024 -- Dec 2024}
+      {Full Stack Web Developer Intern}{Ottawa, ON}
+      \resumeItemListStart
+        \resumeItem{Enhanced platform scalability and maintainability by developing modular \textbf{JavaScript/jQuery} and \textbf{PHP} components integrated into enterprise CMS systems.}
+        \resumeItem{Worked with \textbf{R\&D} and design teams to test new functionalities and ensure stable integration across multiple CMS environments.}
+        \resumeItem{Reduced \textbf{Node.js CI/CD} build failures by \textbf{80\%} through version control and regression detection tooling in collaborative Agile sprints.}
+        \resumeItem{Improved load times and user accessibility, achieving \textbf{90+ Lighthouse scores} across internal WordPress-based systems.}
+        
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\textbf{PLAB2 Practice Platform}}{\href{https://plab2practice.com}{Live Demo} | \href{https://github.com/altansaid/plab2projectnew}{GitHub}}
+      {Real-time Collaborative Practice Platform}{}
+      \resumeItemListStart
+        \resumeItem{Developed a \textbf{Spring Boot + React} web app supporting \textbf{500+ active users}, maintaining sub-\textbf{200ms} latency for concurrent connections.}
+        \resumeItem{Implemented secure microservices with \textbf{JWT}, improving session reliability and performance under load.}
+        \resumeItem{Deployed using \textbf{Docker}, \textbf{PostgreSQL}, and CI/CD workflows on \textbf{Render} and \textbf{Vercel}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Resume Tailoring Automation Workflow}}{\href{https://github.com/altansaid/resume-automation-workflow}{GitHub}}
+      {AI-Powered Resume Optimization System}{}
+      \resumeItemListStart
+    \resumeItem{Architected a modular workflow in \textbf{n8n} composed of sequential nodes for triggering, data retrieval, transformation, AI inference, and validation, forming a fully autonomous resume tailoring pipeline.}
+    \resumeItem{Integrated \textbf{OpenAI GPT} with structured candidate data to generate quantified X–Y–Z achievement statements, ensuring LaTeX-safe formatting through multi-level validation layers.}
+    \resumeItem{Optimized workflow concurrency and state propagation to deliver validated, version-controlled resumes directly from a single \textbf{Slack}-triggered event within \textbf{30 seconds}.}
+
+
+
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+  \resumeItemListStart
+    \resumeItem{\textbf{Languages}}{Java, JavaScript, Python, TypeScript, Go, SQL, HTML, CSS}
+    \resumeItem{\textbf{Frameworks \& Tools}}{Spring Boot, React, Node.js, REST APIs, Docker, Git, Firebase, GCP, PostgreSQL}
+    \resumeItem{\textbf{Key Focus Areas}}{Scalability, Throughput Optimization, Client-Server Architecture, Testing \& Debugging, R\&D Prototyping}
+  \resumeItemListEnd
+
+%-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
@@ -83,62 +126,4 @@
       {Web Development and Internet Applications; Dean's Honour List, GPA: 3.77}{Ottawa, ON}
   \resumeSubHeadingListEnd
 
-%-----------EXPERIENCE-----------------
-\section{Experience}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {\href{https://solace.com}{Solace}}{Sep 2024 -- Dec 2024}
-      {Full Stack Web Developer Intern}{Ottawa, ON}
-      \resumeItemListStart
-        \resumeItem{Engineered and launched a reusable \textbf{JavaScript/jQuery} Table of Contents plugin for enterprise platforms, enhancing navigation efficiency and reducing bounce rate by \textbf{42\%}.}
-        \resumeItem{Diagnosed and corrected \textbf{Node.js} environment mismatches, reducing \textbf{CI/CD} pipeline failures by \textbf{80\%} and boosting build reliability.}
-        \resumeItem{Built and maintained an internal employee engagement microsite using \textbf{PHP}, \textbf{REST APIs}, and \textbf{Bootstrap}, increasing participation by \textbf{50\%}.}
-        \resumeItem{Enhanced full-stack development by integrating \textbf{RESTful services}, optimizing \textbf{React} components, and reinforcing security through best practices.}
-        \resumeItem{Facilitated \textbf{Agile sprints} with global teams, contributing to backlog refinement, peer reviews, and CI/CD processes.}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
-%-----------PROJECTS-----------------
-\section{Projects}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {\textbf{PLAB2 Practice Platform}}{\href{https://plab2practice.com}{Live Demo} | \href{https://github.com/altansaid/plab2projectnew}{GitHub}}
-      {Real-time Collaborative Practice Platform}{}
-      \resumeItemListStart
-        \resumeItem{Developed a real-time collaborative platform supporting \textbf{500+ users} for medical exam prep using \textbf{React}, \textbf{WebSockets}, and \textbf{Spring Boot}.}
-        \resumeItem{Architected secure \textbf{microservices} with \textbf{JWT authentication} and \textbf{RESTful APIs}, ensuring maintainability across \textbf{25+ endpoints}.}
-        \resumeItem{Designed an accessible UI with \textbf{TailwindCSS}, meeting WCAG standards.}
-        \resumeItem{Optimized high concurrency using \textbf{PostgreSQL}, \textbf{Docker}, and CI/CD pipelines.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {\textbf{AI-Powered Interview Preparation App}}{\href{https://interviewcoach-ai.vercel.app}{Live Demo} | \href{https://github.com/altansaid/interviewcoach-ai}{GitHub}}
-      {Full-Stack Interview Prep Platform}{}
-      \resumeItemListStart
-        \resumeItem{Delivered a comprehensive full-stack platform using \textbf{React} and \textbf{Node.js}, integrating \textbf{Gemini AI APIs} to tailor interview prep questions dynamically.}
-        \resumeItem{Implemented robust \textbf{authentication}, role-based access control, and enterprise-compliant data handling.}
-        \resumeItem{Prepared for deployment with thorough \textbf{unit testing}, \textbf{CI/CD pipelines}, and containerized setup.}
-      \resumeItemListEnd
-
-        \resumeSubheading
-  {\textbf{GenAI Resume Pipeline}}{}{AI-Integrated Resume Optimization Workflow}{}
-  \resumeItemListStart
-   \resumeItem{Engineered an \textbf{event-driven automation pipeline} in n8n that consumed Slack triggers, parsed job descriptions, and dynamically generated LaTeX resumes tailored to each role.}
-\resumeItem{Integrated \textbf{OpenAI GPT, HTTP requests, and GitHub Content API} to transform base resume data into context-aware LaTeX output, compiled and deployed through \textbf{automated CI/CD}.}
-\resumeItem{Ensured consistent, context-aware resume generation by leveraging \textbf{GenAI’s} ability to maintain user-specific information, eliminating repetitive edits and significantly reducing preparation time.}
-  \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
-
-
-%-----------SKILLS-----------------
-\section{Technical Skills}
-  \resumeItemListStart
-    \resumeItem{\textbf{Languages}}{Java, JavaScript, TypeScript, C\#, SQL, HTML5, CSS3}
-    \resumeItem{\textbf{Front-End}}{React, Redux, TailwindCSS, Material UI, WebSockets, Responsive \& Accessible Design (WCAG)}
-    \resumeItem{\textbf{Back-End \& Cloud}}{Spring Boot, Node.js, RESTful APIs, JWT/OAuth, Docker, Git, Linux, Azure \& GCP}
-    \resumeItem{\textbf{Quality \& Practices}}{JUnit 5, Jest, React Testing Library, CI/CD Pipelines, Agile/Scrum, Code Reviews}
-  \resumeItemListEnd
-
-%-------------------------------------------
 \end{document}
