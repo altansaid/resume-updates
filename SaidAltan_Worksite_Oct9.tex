@@ -1,0 +1,125 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADER----------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
+  \href{https://saidaltan.com}{saidaltan.com} & (343) 988-3084 \\
+  \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid} & \href{https://github.com/altansaid}{github.com/altansaid} \\
+\end{tabular*}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://arbitragecyclops.com/}{Arbitrage Cyclops}}{Jul 2025 -- Present}
+      {Software Developer}{Remote}
+      \resumeItemListStart
+        \resumeItem{Developed full-stack \textbf{SaaS platform} using real-time marketplace data and \textbf{Go} pipelines, cutting sourcing time by \textbf{10--20 hours/week}.}
+        \resumeItem{Engineered \textbf{React} interface with \textbf{Redux-Saga}, enabling sub-\textbf{350ms} product searches across 10,000+ entries and CSV export from 20+ filters.}
+        \resumeItem{Optimized \textbf{Firestore} pagination and \textbf{Go} microservices on \textbf{Google Cloud}, boosting data throughput by \textbf{70\%} and ensuring \textbf{99.9\% uptime}.}
+        \resumeItem{Integrated \textbf{Stripe}, \textbf{SP-API}, and \textbf{OpenAI GPT} normalization to maintain \textbf{95\%+ data accuracy} in FBA profit analytics.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://solace.com}{Solace}}{Sep 2024 -- Dec 2024}
+      {Full Stack Web Developer Intern}{Ottawa, ON}
+      \resumeItemListStart
+        \resumeItem{Delivered modular \textbf{PHP}/\textbf{JavaScript} portal reused by 3 departments, increasing engagement by \textbf{50\%} and enabling team-specific configs.}
+        \resumeItem{Created SEO-friendly \textbf{jQuery} plugin for CMS menus, lowering site bounce rate by \textbf{42\%} and improving accessibility.}
+        \resumeItem{Resolved \textbf{Node.js CI/CD} toolchain mismatches, reducing build failures by \textbf{80\%} and accelerating deployment.}
+        \resumeItem{Improved Lighthouse \textbf{performance scores to 90+} by optimizing \textbf{WordPress} assets and applying WCAG-compliant patterns.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\textbf{PLAB2 Practice Platform}}{\href{https://plab2practice.com}{Live Demo} | \href{https://github.com/altansaid/plab2projectnew}{GitHub}}
+      {Real-time Collaborative Practice Platform}{}
+      \resumeItemListStart
+        \resumeItem{Built real-time \textbf{Spring Boot + React} app with session-based roles, sustaining \textbf{500+ active users} at sub-\textbf{200ms} latency via \textbf{WebSocket} sync.}
+        \resumeItem{Designed and secured 60+ \textbf{REST APIs} using \textbf{JWT}, enabling timed medical cases, consultations, and instant feedback.}
+        \resumeItem{Deployed with \textbf{Docker} and \textbf{PostgreSQL} via \textbf{Vercel} and \textbf{Render}, supporting full CI/CD rollback and scaling.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Interview Coach AI}}{\href{https://interviewcoach-ai.vercel.app/}{Live Demo} | \href{https://github.com/altansaid/interviewcoach-ai}{GitHub}}
+      {AI-Powered Interview Preparation Platform}{}
+      \resumeItemListStart
+        \resumeItem{Built \textbf{MERN} platform with \textbf{JWT} and \textbf{Google OAuth}, delivering dynamic prompts via \textbf{Gemini AI} with pin/flag features.}
+        \resumeItem{Implemented complete \textbf{REST API} with \textbf{CI/CD}, secure password resets, and file uploads using \textbf{Multer}.}
+        \resumeItem{Crafted responsive UI with \textbf{TailwindCSS} and \textbf{Framer Motion}, ensuring \textbf{WCAG}-compliant accessibility across devices.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+  \resumeItemListStart
+    \resumeItem{\textbf{Languages}}{Java, JavaScript, Python, TypeScript, Go, SQL, HTML, CSS}
+    \resumeItem{\textbf{Frameworks \& Tools}}{Spring Boot, React, Node.js, REST APIs, Docker, Git, Firebase, GCP, PostgreSQL}
+    \resumeItem{\textbf{Key Focus Areas}}{Scalability, Throughput Optimization, Client-Server Architecture, Testing \& Debugging, R\&D Prototyping}
+  \resumeItemListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.algonquincollege.com/sat/program/web-development-internet-applications/}{Algonquin College of Applied Arts and Technology}}{Apr 2025}
+      {Web Development and Internet Applications; Dean's Honour List, GPA: 3.77}{Ottawa, ON}
+  \resumeSubHeadingListEnd
+
+\end{document}
