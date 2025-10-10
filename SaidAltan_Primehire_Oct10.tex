@@ -1,0 +1,120 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
+  \href{https://saidaltan.com}{saidaltan.com} & (343) 988-3084 \\
+  \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid} & \href{https://github.com/altansaid}{github.com/altansaid} \\
+\end{tabular*}
+
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://arbitragecyclops.com/}{Arbitrage Cyclops}}{Jul 2025 -- Present}
+      {Software Developer}{Remote}
+      \resumeItemListStart
+        \resumeItem{Launched full-stack \textbf{SaaS platform} enabling real-time arbitrage, reducing product research time by \textbf{10--20 hours/week} across leading e-commerce marketplaces.}
+        \resumeItem{Built scalable \textbf{Go} microservices to scrape \textbf{500+ products/hour} using retry logic and rate-limiting for reliable concurrent executions.}
+        \resumeItem{Engineered dynamic dashboards using \textbf{React}, \textbf{Redux}, and export features with \textbf{20+ filters} supporting sub-\textbf{350ms} interactive search.}
+        \resumeItem{Optimized \textbf{Firestore} pagination via indexed queries and lazy loading, improving data fetch speed by \textbf{70\%}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://solace.com}{Solace}}{Sep 2024 -- Dec 2024}
+      {Full Stack Web Developer Intern}{Ottawa, ON}
+      \resumeItemListStart
+        \resumeItem{Delivered reusable \textbf{JavaScript/jQuery} component for enterprise CMS, improving site navigation and lowering bounce rates by \textbf{42\%}.}
+        \resumeItem{Fixed \textbf{Node.js CI/CD} conflicts across pipelines, cutting deployment failures by \textbf{80\%} within Agile release cycles.}
+        \resumeItem{Created internal microsite with \textbf{PHP} and \textbf{Bootstrap} to boost employee engagement by \textbf{50\%} through reusable content modules.}
+        \resumeItem{Raised \textbf{Lighthouse} SEO/accessibility scores above \textbf{90+} on WordPress assets by implementing audit-driven code updates.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\textbf{PLAB2 Practice Platform}}{\href{https://plab2practice.com}{Live Demo} | \href{https://github.com/altansaid/plab2projectnew}{GitHub}}
+      {Real-time Collaborative Practice Platform}{}
+      \resumeItemListStart
+        \resumeItem{Built secure \textbf{Spring Boot + React} platform with \textbf{JWT} and WebSocket support, handling \textbf{500+ active users} under \textbf{200ms} latency.}
+        \resumeItem{Designed \textbf{60+ RESTful} microservice endpoints deployed via \textbf{Docker}, \textbf{PostgreSQL}, and \textbf{Flyway} for robust versioning.}
+        \resumeItem{Implemented role-based sessions, chat, and live feedback using \textbf{STOMP} and \textbf{Tailwind CSS} for PLAB2 candidates.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Interview Coach AI}}{\href{https://interviewcoach-ai.vercel.app/}{Live Demo} | \href{https://github.com/altansaid/interviewcoach-ai}{GitHub}}
+      {AI Interview Preparation Platform}{}
+      \resumeItemListStart
+        \resumeItem{Developed \textbf{MERN} stack platform integrating \textbf{Gemini AI} to generate tailored interview questions, explanations, and persistent tracking notes.}
+        \resumeItem{Implemented \textbf{Google OAuth}, \textbf{JWT}, and reset flows to enhance secure login and streamline \textbf{user experience}.}
+        \resumeItem{Built accessible, responsive UI using \textbf{TailwindCSS} and \textbf{Framer Motion}, ensuring WCAG compliance across devices.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+  \resumeItemListStart
+    \resumeItem{\textbf{Languages}}{Java, JavaScript, Python, TypeScript, Go, SQL, HTML, CSS}
+    \resumeItem{\textbf{Frameworks \& Tools}}{Spring Boot, React, Node.js, REST APIs, Docker, Git, Firebase, GCP, PostgreSQL}
+    \resumeItem{\textbf{Key Focus Areas}}{Scalability, Throughput Optimization, Client-Server Architecture, Testing \& Debugging, R\&D Prototyping}
+  \resumeItemListEnd
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.algonquincollege.com/sat/program/web-development-internet-applications/}{Algonquin College of Applied Arts and Technology}}{Apr 2025}
+      {Web Development and Internet Applications; Dean's Honour List, GPA: 3.77}{Ottawa, ON}
+  \resumeSubHeadingListEnd
+
+\end{document}
