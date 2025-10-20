@@ -19,7 +19,6 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -31,14 +30,12 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Section formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 \pdfgentounicode=1
 
-% Custom commands
 \newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
@@ -54,83 +51,74 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-%----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\Large Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
-  \href{https://saidaltan.com?utm_source=cheil\&utm_medium=resume}{saidaltan.com} & (343) 988-3084 \\
+  \href{https://saidaltan.com?utm_source=resume\&utm_medium=pdf}{saidaltan.com} & (343) 988-3084 \\
   \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid} & \href{https://github.com/altansaid}{github.com/altansaid} \\
 \end{tabular*}
 
-%-----------EXPERIENCE-----------------
 \section{Experience}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
 
-    \resumeSubheading
-      {\href{https://arbithub.com/}{ArbitHub}}{Jul 2025 -- Present}
-      {Front-End Web Developer}{Remote}
-      \resumeItemListStart
-        \resumeItem{Accelerated product sourcing by \textbf{10-20 hours/week} for paid users by building responsive \textbf{React} dashboards with \textbf{Redux-Saga} and real-time \textbf{Firestore} queries.}
-        \resumeItem{Reduced query latency by \textbf{70\%} on datasets over \textbf{10,000+} products by implementing indexed pagination and lazy loading in \textbf{React} tables backed by \textbf{Firestore}.}
-        \resumeItem{Achieved \textbf{<350ms} search responses across browsers by debouncing \textbf{API} queries and optimizing calls between \textbf{Firebase Functions} and \textbf{Go} services, increasing engagement.}
-        \resumeItem{Lifted re-engagement by delivering weekly deal emails with \textbf{45\%} open rates by automating \textbf{SendGrid} pipelines and \textbf{CSV} exports from \textbf{React} dashboards.}
-      \resumeItemListEnd
+  \resumeSubheading
+    {\href{https://arbithub.com/}{ArbitHub}}{Jul 2025 -- Present}
+    {Front-End Developer}{Remote}
+    \resumeItemListStart
+      \resumeItem{Built fast, responsive dashboards with \textbf{React} and \textbf{TypeScript}, improving query speed by \textbf{70\%} and cutting search latency below \textbf{350ms}.}
+      \resumeItem{Optimized large data tables (\textbf{10,000+} items) with indexed pagination and lazy loading in \textbf{Firestore}.}
+      \resumeItem{Containerized services with \textbf{Docker} on \textbf{Google Cloud}, maintaining \textbf{99.9\%} uptime and automated scaling.}
+      \resumeItem{Integrated secure \textbf{Stripe} flows and rate-limiting across \textbf{API} endpoints to prevent unauthorized access.}
+    \resumeItemListEnd
 
-    \resumeSubheading
-      {\href{https://solace.com}{Solace}}{Sep 2024 -- Dec 2024}
-      {Web Developer Intern (CMS Publishing \& Optimization)}{Ottawa, ON}
-      \resumeItemListStart
-        \resumeItem{Decreased bounce rate by \textbf{42\%} on \textbf{WordPress} knowledge bases by shipping a reusable \textbf{JavaScript}/\textbf{jQuery} Table of Contents plugin improving navigation.}
-        \resumeItem{Raised \textbf{Lighthouse} performance and accessibility scores to \textbf{90+} by fixing \textbf{SEO}, contrast, and \textbf{ARIA} issues across templates, lifting user experience.}
-        \resumeItem{Cut \textbf{CI/CD} deployment failures by \textbf{80\%} by resolving \textbf{Node.js} version mismatches and lockfile conflicts, stabilizing build pipeline.}
-        \resumeItem{Increased microsite participation by \textbf{50\%} company-wide by building \textbf{PHP}, \textbf{REST API}, and \textbf{Bootstrap} modules enabling reusable content and faster publishing.}
-      \resumeItemListEnd
+  \resumeSubheading
+    {\href{https://solace.com}{Solace}}{Sep 2024 -- Dec 2024}
+    {Web Developer Intern}{Ottawa, ON}
+    \resumeItemListStart
+      \resumeItem{Developed reusable \textbf{JavaScript} and \textbf{jQuery} components in \textbf{WordPress}, reducing content bounce rate by \textbf{42\%}.}
+      \resumeItem{Improved \textbf{Lighthouse} performance and accessibility scores to \textbf{90+} through better semantic structure and SEO fixes.}
+      \resumeItem{Stabilized \textbf{CI/CD} pipelines by resolving Node version mismatches, cutting deployment failures by \textbf{80\%}.}
+      \resumeItem{Built responsive internal microsites with \textbf{PHP} and \textbf{REST APIs}, increasing employee engagement by \textbf{50\%}.}
+    \resumeItemListEnd
 
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------------
 \section{Projects}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
 
-    \resumeSubheading
-      {\textbf{PLAB2 Practice Platform}}{\href{https://plab2practice.com}{Live Demo} | \href{https://github.com/altansaid/plab2projectnew}{GitHub}}
-      {Real-time Collaborative Practice Platform}{}
-      \resumeItemListStart
-        \resumeItem{Enabled real-time practice for \textbf{500+} users by building \textbf{React} and \textbf{Spring Boot} app with \textbf{WebSockets}, supporting \textbf{200+} concurrent sessions.}
-        \resumeItem{Reduced synchronization latency to \textbf{200ms} across roles by implementing \textbf{STOMP} \textbf{WebSockets} and optimizing server threading in \textbf{Spring Boot}.}
-        \resumeItem{Improved reliability and scalability for \textbf{500+} active users by containerizing services with \textbf{Docker}, using \textbf{PostgreSQL} migrations, and deploying on \textbf{Render} and \textbf{Vercel}.}
-      \resumeItemListEnd
+  \resumeSubheading
+    {\textbf{PLAB2 Practice Platform}}{\href{https://plab2practice.com}{Live Demo} | \href{https://github.com/altansaid/plab2projectnew}{GitHub}}
+    {Real-time Collaborative Platform}{}
+    \resumeItemListStart
+      \resumeItem{Built a \textbf{React + Spring Boot} system with \textbf{WebSockets} (\textbf{STOMP}) supporting \textbf{200+} concurrent users with under \textbf{200ms} latency.}
+      \resumeItem{Scaled backend with \textbf{PostgreSQL} and \textbf{Docker} containers deployed on \textbf{Render} and \textbf{Vercel}.}
+      \resumeItem{Improved reliability for \textbf{500+} active users by adding caching, health checks, and CI/CD workflows.}
+    \resumeItemListEnd
 
-    \resumeSubheading
-      {\textbf{AI-Powered Interview App}}{\href{https://interviewcoach-ai.vercel.app}{Live Demo} | \href{https://github.com/altansaid/interviewcoach-ai}{GitHub}}
-      {Full-Stack Interview Prep Platform}{}
-      \resumeItemListStart
-        \resumeItem{Implemented secure authentication supporting \textbf{2} methods (\textbf{JWT}, \textbf{Google OAuth}) by integrating bcrypt and email verification, cutting setup complexity.}
-        \resumeItem{Streamlined password recovery to \textbf{1} modal step by building end-to-end UX with \textbf{React}, \textbf{TailwindCSS}, and email tokens, reducing drop-offs.}
-        \resumeItem{Automated \textbf{CI/CD} to ship tested builds by adding \textbf{Jest} and \textbf{React Testing Library}, enabling \textbf{1-click} deployments and repeatable releases.}
-      \resumeItemListEnd
+  \resumeSubheading
+    {\textbf{AI Interview Coach}}{\href{https://interviewcoach-ai.vercel.app}{Live Demo} | \href{https://github.com/altansaid/interviewcoach-ai}{GitHub}}
+    {Full-Stack AI Interview App}{}
+    \resumeItemListStart
+      \resumeItem{Delivered a \textbf{React + Node.js} app integrating \textbf{Gemini AI} to generate role-specific interview questions.}
+      \resumeItem{Implemented \textbf{JWT} and \textbf{Google OAuth} authentication with secure password reset and modal-based UX.}
+      \resumeItem{Automated \textbf{CI/CD} using \textbf{GitHub Actions} and \textbf{Jest} tests for consistent, reliable releases.}
+    \resumeItemListEnd
 
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 
-%-----------SKILLS-----------------
 \section{Technical Skills}
   \resumeItemListStart
-    \resumeItem{\textbf{Languages}}{HTML5, CSS3/Sass, JavaScript (ES6+), TypeScript, PHP, SQL, Java}
-    \resumeItem{\textbf{Front-End}}{React, TailwindCSS, Bootstrap, Responsive \& Accessible Design (WCAG)}
-    \resumeItem{\textbf{CMS Tools}}{WordPress (Multisite, Themes, Plugins), Gutenberg, Elementor, WP-CLI}
-    \resumeItem{\textbf{Design \& Collaboration}}{Figma, Photoshop, Adobe XD, Agile/Scrum, Version Control (Git)}
-    \resumeItem{\textbf{Analytics \& Optimization}}{GA4, SEO, Google Tag Manager, Lighthouse, Performance Auditing}
+    \resumeItem{\textbf{Frontend}}{React, Next.js, TypeScript, JavaScript (ES6+), TailwindCSS, HTML5, CSS3/Sass}
+    \resumeItem{\textbf{Backend \& DevOps}}{Node.js, Express, Python (scripts), PostgreSQL, REST APIs, Docker, GitHub Actions, Google Cloud}
+    \resumeItem{\textbf{Tools \& Collaboration}}{Figma, WordPress, SEO Optimization, Agile/Scrum, Git, Jest}
   \resumeItemListEnd
 
-%-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {\href{https://www.algonquincollege.com/sat/program/web-development-internet-applications/}{Algonquin College of Applied Arts and Technology}}{Apr 2025}
-      {Diploma in Web Development and Internet Applications; Dean's Honour List, \textbf{GPA: 3.77}}{Ottawa, ON}
+      {\href{https://www.algonquincollege.com/sat/program/web-development-internet-applications/}{Algonquin College}}{Apr 2025}
+      {Diploma in Web Development and Internet Applications — Dean’s Honour List (\textbf{GPA 3.77})}{Ottawa, ON}
   \resumeSubHeadingListEnd
 
 \end{document}
