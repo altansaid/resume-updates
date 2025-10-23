@@ -1,0 +1,124 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
+  \href{https://saidaltan.com?utm_source=clipboard\&utm_medium=resume}{saidaltan.com} & (343) 988-3084 \\
+  \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid} & \href{https://github.com/altansaid}{github.com/altansaid} \\
+\end{tabular*}
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\href{https://arbithub.com/}{Arbitrage Cyclops}}{Jul 2025 -- Present}
+      {Software Developer}{Remote}
+      \resumeItemListStart
+        \resumeItem{Designed scalable \textbf{React}+\textbf{Go} SaaS tool reducing product research time by \textbf{10--20 hours} through real-time analytics on marketplace trends and pricing.}
+        \resumeItem{Engineered robust \textbf{Go} microservices scraping \textbf{500+} products/hour with built-in retry, rate-limiting, and anti-bot protections.}
+        \resumeItem{Integrated \textbf{OpenAI}-powered intelligence engine reducing cross-site validation workload by \textbf{80\%} via automated profit analysis.}
+        \resumeItem{Tuned \textbf{Firebase} queries and deployed to \textbf{Google Cloud Run}, ensuring \textbf{99.9\%} uptime with seamless auto-scaling infrastructure.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://solace.com}{Solace}}{Sep 2024 -- Dec 2024}
+      {Web Developer, Co-op}{Ottawa, ON}
+      \resumeItemListStart
+        \resumeItem{Created reusable \textbf{JavaScript}/\textbf{jQuery} TOC plugin reducing navigation time and bounce rate by \textbf{42\%} across content-rich documentation.}
+        \resumeItem{Elevated \textbf{Lighthouse} scores to \textbf{90+} by correcting SEO metadata and accessibility violations in live production pages.}
+        \resumeItem{Delivered internal microsite using \textbf{PHP}+\textbf{Bootstrap}, boosting employee engagement by \textbf{50\%} through modular CMS-driven interface.}
+        \resumeItem{Resolved \textbf{CI/CD} pipeline issues in \textbf{Node.js}, cutting build failures by \textbf{80\%} via dependency caching and environment fixes.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\textbf{PLAB2 Practice Platform}}{\href{https://plab2practice.com}{Live Demo} | \href{https://github.com/altansaid/plab2projectnew}{GitHub}}
+      {Real-time Collaborative Platform}{}
+      \resumeItemListStart
+        \resumeItem{Engineered full-stack \textbf{React}+\textbf{Spring Boot} platform for \textbf{500+} users with \textbf{WebSocket}-based live sessions under \textbf{200ms} latency.}
+        \resumeItem{Secured stack with \textbf{JWT} authentication, modular \textbf{REST APIs}, and containerized deployment using \textbf{Docker}.}
+        \resumeItem{Designed timed role-based consultations with randomized clinical scenarios, enhancing realism and feedback workflows.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Resume Tailoring Automation Workflow}}{\href{}{GitHub} | \href{https://github.com/altansaid/resume-updates}{Repo}}
+      {Automated Resume Generation Pipeline}{}
+      \resumeItemListStart
+        \resumeItem{Built self-updating \textbf{n8n} LaTeX workflow using \textbf{OpenAI} for content generation and \textbf{GitHub API} for version-controlled commits.}
+        \resumeItem{Integrated \textbf{Slack}-triggered events, structured \textbf{JSON} parsing, and validation checks for seamless resume updates.}
+        \resumeItem{Eliminated failures using fallback templates and deterministic control logic across all transformation nodes.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Technical Skills}
+  \resumeItemListStart
+    \resumeItem{\textbf{Languages:} JavaScript (ES6+), TypeScript, Go, Python, SQL}
+    \resumeItem{\textbf{Frameworks \& Tools:} React, Node.js, Express, Spring Boot, Docker, PostgreSQL, GitHub Actions}
+    \resumeItem{\textbf{Other:} WordPress (Custom Plugins), REST APIs, Agile/Scrum, Figma, SEO Optimization, CI/CD}
+  \resumeItemListEnd
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.algonquincollege.com/sat/program/web-development-internet-applications/}{Algonquin College of Applied Arts and Technology}}{Apr 2025}
+      {Diploma in Web Development and Internet Applications; Dean's Honour List, \textbf{GPA: 3.77}}{Ottawa, ON}
+  \resumeSubHeadingListEnd
+
+\end{document}
