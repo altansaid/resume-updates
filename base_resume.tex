@@ -19,7 +19,6 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -31,14 +30,12 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Section formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 \pdfgentounicode=1
 
-% Custom commands
 \newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
@@ -54,14 +51,11 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-%----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\Large Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
-  \href{https://saidaltan.com?utm_source=cheil\&utm_medium=resume}{saidaltan.com} & (343) 988-3084 \\
+  \href{https://saidaltan.com?utm_source=osi\&utm_medium=resume}{saidaltan.com} & (343) 988-3084 \\
   \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid} & \href{https://github.com/altansaid}{github.com/altansaid} \\
 \end{tabular*}
 
@@ -73,20 +67,20 @@
       {\href{https://arbithub.com/}{Arbitrage Cyclops}}{Jul 2025 -- Present}
       {Software Developer}{Remote}
       \resumeItemListStart
-        \resumeItem{Designed and maintained responsive \textbf{React}-based dashboards, improving usability and data consistency across multiple client environments.}
-        \resumeItem{Optimized front-end performance through code refactoring, lazy loading, and accessibility improvements to ensure smooth user experience.}
-        \resumeItem{Monitored website \textbf{uptime}, accessibility, and performance metrics using automated tools, proactively resolving issues across browsers and devices.}
+        \resumeItem{Built and maintained a full-stack \textbf{React}+\textbf{Go} application supporting live analytics across global marketplaces, increasing data throughput by \textbf{35\%}.}
+        \resumeItem{Developed modular \textbf{Go} microservices with retry logic and caching, improving task reliability and reducing failed API calls by \textbf{40\%}.}
+        \resumeItem{Integrated \textbf{OpenAI} APIs for automated product matching, cutting manual validation time from hours to minutes.}
+        \resumeItem{Contributed to design and code reviews, helping ensure maintainable and well-documented solutions within an Agile team.}
       \resumeItemListEnd
 
     \resumeSubheading
       {\href{https://solace.com}{Solace}}{Sep 2024 -- Dec 2024}
       {Web Developer, Co-op}{Ottawa, ON}
       \resumeItemListStart
-        \resumeItem{Published, formatted, and maintained content across \textbf{WordPress Multisite} platforms, ensuring consistency in layout, branding, and SEO structure.}
-        \resumeItem{Built custom \textbf{WordPress plugins and Gutenberg blocks}, including a reusable Table of Contents feature, improving navigation and reducing bounce rate by \textbf{42\%}.}
-        \resumeItem{Developed new internal microsites using custom themes and SEO best practices, resulting in a \textbf{50\% YoY traffic increase} (\textbf{GA4}).}
-        \resumeItem{Validated and tested content updates across browsers and screen sizes to ensure responsive, accessible, and visually consistent experiences.}
-        \resumeItem{Collaborated with designers, content strategists, and developers in \textbf{Agile sprints} to plan releases, review code, and refine content workflows.}
+        \resumeItem{Developed custom WordPress components using \textbf{PHP} and \textbf{JavaScript} to streamline content management for multiple departments.}
+        \resumeItem{Enhanced page performance and \textbf{Lighthouse} scores to above \textbf{90/100} by optimizing SEO structure, scripts, and image handling.}
+        \resumeItem{Collaborated with marketing and design teams to launch a company-wide event microsite that increased employee engagement by \textbf{50\%}.}
+        \resumeItem{Supported CI/CD troubleshooting and version control improvements, reducing deployment issues across environments.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -97,20 +91,20 @@
 
     \resumeSubheading
       {\textbf{PLAB2 Practice Platform}}{\href{https://plab2practice.com}{Live Demo} | \href{https://github.com/altansaid/plab2projectnew}{GitHub}}
-      {Real-time Collaborative Practice Platform}{}
+      {Real-time Collaborative Platform}{}
       \resumeItemListStart
-        \resumeItem{Enabled real-time practice for \textbf{500+ users} with \textbf{React}, \textbf{WebSockets}, and \textbf{Spring Boot}, supporting \textbf{200+ concurrent sessions}.}
-        \resumeItem{Architected secure microservices with \textbf{PostgreSQL}, Docker, and CI/CD pipelines, ensuring scalability and reliability.}
-        \resumeItem{Integrated \textbf{AWS} cloud services for hosting, availability, and monitoring.}
+        \resumeItem{Developed a \textbf{React}+\textbf{Spring Boot} platform enabling live role-play sessions via \textbf{WebSockets}, serving \textbf{500+} active users.}
+        \resumeItem{Improved data synchronization latency to under \textbf{200ms} by refining message handling and session state logic.}
+        \resumeItem{Built secure REST APIs with \textbf{JWT} authentication and deployed the system via \textbf{Docker} containers on cloud infrastructure.}
       \resumeItemListEnd
 
     \resumeSubheading
       {\textbf{AI-Powered Interview App}}{\href{https://interviewcoach-ai.vercel.app}{Live Demo} | \href{https://github.com/altansaid/interviewcoach-ai}{GitHub}}
-      {Full-Stack Interview Prep Platform}{}
+      {Full-Stack Interview Preparation Tool}{}
       \resumeItemListStart
-        \resumeItem{Developed a full-stack platform using \textbf{React} and \textbf{Node.js} to deliver interactive, content-driven user experiences.}
-        \resumeItem{Implemented secure authentication and optimized \textbf{CI/CD} pipelines for reliable releases.}
-        \resumeItem{Integrated automated testing with \textbf{Jest} and React Testing Library to maintain platform stability.}
+        \resumeItem{Implemented \textbf{Gemini AI} to generate personalized interview questions and responses for realistic mock interview sessions.}
+        \resumeItem{Integrated \textbf{Google OAuth} and token-based password reset to ensure secure and user-friendly authentication.}
+        \resumeItem{Set up automated testing and CI/CD pipelines with \textbf{GitHub Actions}, ensuring stable releases and faster deployments.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -118,9 +112,9 @@
 %-----------SKILLS-----------------
 \section{Technical Skills}
   \resumeItemListStart
-    \resumeItem{\textbf{Frontend}}{React, Next.js, TypeScript, JavaScript (ES6+), TailwindCSS, HTML5, CSS3/Sass, Responsive \& Accessible Design (WCAG)}
-    \resumeItem{\textbf{Backend \& DevOps}}{Node.js, Express, PostgreSQL, REST APIs, Docker, GitHub Actions, CI/CD, Google Cloud (GCP)}
-    \resumeItem{\textbf{Tools \& Collaboration}}{Figma, WordPress (Custom Themes \& Plugins), SEO \& Lighthouse Optimization, Agile/Scrum, Git, Jest Testing}
+    \resumeItem{\textbf{Languages:} JavaScript (ES6+), TypeScript, Go, Python, SQL}
+    \resumeItem{\textbf{Frameworks \& Tools:} React, Node.js, Express, Spring Boot, Docker, PostgreSQL, GitHub Actions}
+    \resumeItem{\textbf{Other:} WordPress (Custom Plugins), REST APIs, Agile/Scrum, Figma, SEO Optimization, CI/CD}
   \resumeItemListEnd
 
 %-----------EDUCATION-----------------
@@ -128,7 +122,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {\href{https://www.algonquincollege.com/sat/program/web-development-internet-applications/}{Algonquin College of Applied Arts and Technology}}{Apr 2025}
-      {Diploma in Web Development and Internet Applications; Dean's Honour List, \textbf{GPA: 3.77}}{Ottawa, ON}
+      {Diploma in Web Development and Internet Applications; Dean’s Honour List, \textbf{GPA: 3.77}}{Ottawa, ON}
   \resumeSubHeadingListEnd
 
 \end{document}
