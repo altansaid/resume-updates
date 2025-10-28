@@ -1,0 +1,128 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
+  \href{https://saidaltan.com?utm_source=osi\&utm_medium=resume}{saidaltan.com} & (343) 988-3084 \\
+  \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid} & \href{https://github.com/altansaid}{github.com/altansaid} \\
+\end{tabular*}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\href{https://arbithub.com/}{Arbitrage Cyclops}}{Jul 2025 -- Present}
+      {Software Developer}{Remote}
+      \resumeItemListStart
+        \resumeItem{Scaled microservices-based data ingestion by \textbf{35\%} using \textbf{Go}, \textbf{REST} APIs, \textbf{Docker}, and \textbf{Linux}; cut failed calls \textbf{40\%} with retry, caching, and rate limiting.}
+        \resumeItem{Built \textbf{React}+\textbf{TypeScript} dashboards with dynamic filtering and CSV export, delivering sub-\textbf{350ms} queries and real-time analytics across global marketplaces.}
+        \resumeItem{Automated \textbf{CI/CD} with \textbf{GitHub Actions} for containerized services, achieving \textbf{99.9\%} uptime and zero-downtime releases.}
+        \resumeItem{Reduced manual product validation \textbf{80\%} by integrating \textbf{OpenAI}; led Agile code reviews applying software design patterns for maintainability.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://solace.com}{Solace}}{Sep 2024 -- Dec 2024}
+      {Web Developer, Co-op}{Ottawa, ON}
+      \resumeItemListStart
+        \resumeItem{Developed reusable WordPress components in \textbf{PHP} and \textbf{JavaScript}, integrating \textbf{REST} APIs; improved knowledge-base navigation speed and reduced bounce rate \textbf{42\%}.}
+        \resumeItem{Raised \textbf{Lighthouse} performance and accessibility to \textbf{90+} by optimizing scripts, images, and semantic HTML5.}
+        \resumeItem{Resolved Node.js environment mismatches in \textbf{CI/CD}, reducing build failures \textbf{80\%} across environments using \textbf{Git} and \textbf{Linux} tooling.}
+        \resumeItem{Launched an internal microsite via Agile collaboration, increasing employee engagement \textbf{50\%} with modular components and secure workflows.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\textbf{PLAB2 Practice Platform}}{\href{https://plab2practice.com}{Live Demo} | \href{https://github.com/altansaid/plab2projectnew}{GitHub}}
+      {Real-time Collaborative Platform}{}
+      \resumeItemListStart
+        \resumeItem{Built real-time platform for \textbf{500+ users} using \textbf{React}, \textbf{TypeScript}, \textbf{Spring Boot}, and \textbf{WebSocket}, sustaining sub-\textbf{200ms} sync under peak load.}
+        \resumeItem{Designed \textbf{REST} APIs with \textbf{Spring Security} and \textbf{JWT}; enforced role-based access to protect sessions and data.}
+        \resumeItem{Containerized services with \textbf{Docker} and deployed \textbf{PostgreSQL} with migrations, improving scalability and reliability.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{AI-Powered Interview App}}{\href{https://interviewcoach-ai.vercel.app}{Live Demo} | \href{https://github.com/altansaid/interviewcoach-ai}{GitHub}}
+      {Full-Stack Interview Preparation Tool}{}
+      \resumeItemListStart
+        \resumeItem{Delivered personalized interview coaching via \textbf{Gemini AI} on \textbf{MERN}, increasing practice efficiency \textbf{30\%} with tailored prompts and feedback.}
+        \resumeItem{Secured authentication with \textbf{JWT}, \textbf{Google OAuth}, and encrypted resets; enforced best practices across \textbf{REST} APIs.}
+        \resumeItem{Automated \textbf{CI/CD} with \textbf{GitHub Actions} and \textbf{Docker}, enabling faster, stable releases.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{Technical Skills}
+  \resumeItemListStart
+    \resumeItem{\textbf{Languages:} Java, TypeScript, JavaScript, Go, Python, SQL}
+    \resumeItem{\textbf{Frameworks \& Tools:} Spring Boot, React, Node.js, Express, Docker, PostgreSQL, WebSocket, Redux, Git, GitHub Actions}
+    \resumeItem{\textbf{Other:} REST APIs, JWT/OAuth2, Microservices, Agile/Scrum, Linux, CI/CD, Google Cloud Run, Figma, WordPress (Custom Plugins), SEO Optimization}
+  \resumeItemListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.algonquincollege.com/sat/program/web-development-internet-applications/}{Algonquin College of Applied Arts and Technology}}{Apr 2025}
+      {Diploma in Web Development and Internet Applications; Dean's Honour List, \textbf{GPA: 3.77}}{Ottawa, ON}
+  \resumeSubHeadingListEnd
+
+\end{document}
