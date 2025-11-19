@@ -1,0 +1,154 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%-----------HEADER-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
+  Ottawa, ON, Canada & \href{https://saidaltan.com}{saidaltan.com} \\
+  \href{https://www.linkedin.com/in/saidaltan}{linkedin.com/in/saidaltan} & \href{https://github.com/altansaid}{github.com/altansaid} \\
+\end{tabular*}
+
+%-----------SUMMARY-----------------
+\section{Summary}
+\resumeItemListStart
+  \resumeItem{Junior backend and micro-services developer with experience building \textbf{Java Spring Boot}, \textbf{Go}, and \textbf{Node.js} services, deploying cloud-based applications, and collaborating in \textbf{Agile/Scrum} teams. Focused on designing \textbf{RESTful APIs}, maintaining \textbf{production-ready} services, and writing \textbf{clean}, testable code within established patterns and code review processes.}
+\resumeItemListEnd
+
+%-----------TECHNICAL SKILLS-----------------
+\section{Technical Skills}
+\resumeItemListStart
+  \resumeItem{\textbf{Languages:} Java, C\#, Go, TypeScript, JavaScript, PHP, SQL}
+  \resumeItem{\textbf{Backend \& Micro-services:} Spring Boot, \textbf{RESTful APIs}, Microservices Architecture, Node.js, Express, ASP.NET Core, JWT, OAuth, WebSockets}
+  \resumeItem{\textbf{Cloud \& DevOps:} Docker, Google Cloud Run, Firebase/Firestore, Render, Vercel, CI/CD pipelines, Git, Linux CLI, Infrastructure as Code concepts (\textbf{Terraform} -- self-studying), AWS concepts (EC2, Lambda, ECS, S3 -- currently learning)}
+  \resumeItem{\textbf{Databases:} PostgreSQL, MySQL, MongoDB}
+  \resumeItem{\textbf{Frontend (for integration):} React, TypeScript, Redux, TailwindCSS, Material UI, Bootstrap, Responsive Design}
+  \resumeItem{\textbf{Practices \& Process:} Agile/Scrum, Code Reviews, Unit Testing, Clean Architecture, Documentation, Debugging \& Troubleshooting, Remote Collaboration}
+\resumeItemListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {\href{https://arbitragecyclops.com/}{Arbitrage Cyclops}}{Jul 2025 -- Present}
+    {Software Developer}{Remote}
+    \resumeItemListStart
+      \resumeItem{Increased product sourcing efficiency by enabling users to save \textbf{10--20 hours/week} through a full-stack \textbf{SaaS} platform that automates online arbitrage workflows using \textbf{Go} microservices and a \textbf{React} frontend.}
+      \resumeItem{Achieved reliable, scalable data collection of \textbf{500+ products/hour} per marketplace by designing concurrent \textbf{Go} microservices with rate limiting, retry logic, and anti-bot detection, then containerizing services with \textbf{Docker} for cloud deployment.}
+      \resumeItem{Improved profit analysis accuracy and reduced manual validation time by \textbf{80\%} by integrating an \textbf{OpenAI GPT-3.5}-powered engine that normalizes pack quantities and flags cross-marketplace inconsistencies.}
+      \resumeItem{Supported \textbf{99.9\%} uptime and elastic scaling by deploying backend services with \textbf{Firebase Functions} and containerized workloads on \textbf{Google Cloud Run}, following established deployment and monitoring practices.}
+      \resumeItem{Enhanced data retrieval performance by \textbf{70\%} for datasets over \textbf{10,000+} products by optimizing \textbf{Firestore} queries with indexed pagination and lazy loading, improving responsiveness of downstream micro-services and dashboards.}
+      \resumeItem{Strengthened security and reliability of APIs by implementing \textbf{secure authentication}, CORS whitelisting, and rate-limiting middleware, integrating with \textbf{Stripe} for PCI-compliant payment flows and documenting patterns for the team.}
+      \resumeItem{Supported maintainable delivery in an \textbf{Agile} environment by using \textbf{Git}-based workflows, participating in standups and code reviews, and troubleshooting production issues across services to keep deployments stable.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {\href{https://solace.com}{Solace}}{Sep 2024 -- Dec 2024}
+    {Web Developer Intern}{Ottawa, Canada}
+    \resumeItemListStart
+      \resumeItem{Improved navigation efficiency and reduced bounce rate by \textbf{42\%} on internal knowledge bases by developing and deploying a reusable \textbf{JavaScript}/\textbf{jQuery} Table of Contents plugin integrated into existing \textbf{WordPress} templates.}
+      \resumeItem{Raised \textbf{Lighthouse} performance and accessibility scores to consistently \textbf{90+} by analyzing audit reports, optimizing DOM structure, deferring scripts, and improving semantic markup and ARIA usage.}
+      \resumeItem{Increased employee engagement by \textbf{50\%} for internal initiatives by building an employee engagement microsite using \textbf{PHP}, \textbf{REST APIs}, and \textbf{Bootstrap}, structured for modular content reuse across multiple departments.}
+      \resumeItem{Reduced CI/CD build and deployment failures by \textbf{80\%} by diagnosing \textbf{Node.js} version mismatches in the pipeline, aligning local and pipeline environments, and updating documentation for future contributors.}
+      \resumeItem{Improved reliability and scalability of content-driven pages by integrating backend \textbf{RESTful services} with frontend components, applying secure coding practices and following existing architectural standards.}
+      \resumeItem{Supported maintainable delivery within a cross-functional team by participating in \textbf{Agile} sprints, backlog grooming, and peer code reviews using \textbf{Jira} and Git-based workflows, ensuring changes aligned with team conventions.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {PLAB2 Practice Platform}{\href{https://plab2practice.com}{Live} \textbar{} \href{https://github.com/altansaid/plab2projectnew}{GitHub}}
+    {Spring Boot Microservices \& Real-time Collaboration}{}
+    \resumeItemListStart
+      \resumeItem{Supported \textbf{500+} active users in a production-like environment by architecting a full-stack \textbf{PLAB2} exam practice platform with \textbf{Spring Boot} microservices, \textbf{React}/\textbf{TypeScript} frontend, and cloud-based deployment on \textbf{Render} and \textbf{Vercel}.}
+      \resumeItem{Enabled structured Doctor/Patient/Observer role-play sessions by designing \textbf{60+} \textbf{RESTful API} endpoints in modular \textbf{Spring Boot} services, following clean controller-service-repository patterns and documenting endpoints for integration.}
+      \resumeItem{Maintained secure, role-based access by implementing \textbf{JWT}-secured authentication and authorization with \textbf{Spring Security}, enforcing permissions across session management and feedback flows.}
+      \resumeItem{Delivered sub-\textbf{200ms} real-time synchronization between participants by integrating \textbf{WebSockets} (STOMP) for session state updates, optimizing message payloads, and handling reconnection logic on both client and server.}
+      \resumeItem{Improved scalability and reliability of data persistence by using \textbf{PostgreSQL} with \textbf{Flyway} migrations and containerizing services with \textbf{Docker}, enabling reproducible local and cloud environments.}
+      \resumeItem{Ensured maintainable integration between backend and frontend by exposing well-documented REST contracts, handling error states consistently, and collaborating with the React layer to support accessible, responsive UI.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Interview Coach AI}{\href{https://interviewcoach-ai.vercel.app/}{Live} \textbar{} \href{https://github.com/altansaid/interviewcoach-ai}{GitHub}}
+    {MERN REST API \& Authentication}{}
+    \resumeItemListStart
+      \resumeItem{Improved interview preparation workflow for users by building a cloud-native \textbf{MERN} platform that exposes a structured \textbf{RESTful API} and integrates with Google\textquotesingle s \textbf{Gemini} for personalized question generation.}
+      \resumeItem{Increased account security and reduced friction during login by implementing \textbf{JWT}-based sessions, \textbf{Google OAuth}, \textbf{bcrypt} password hashing, and a fully modal-based password reset flow with email verification.}
+      \resumeItem{Improved maintainability of the backend by organizing the \textbf{Node.js}/\textbf{Express} server with an \textbf{MVC} architecture, typed request/response contracts, and validation middleware for all major endpoints.}
+      \resumeItem{Ensured reliable handling of user-uploaded assets by integrating \textbf{Multer} for image uploads, enforcing file size/type constraints, and sanitizing inputs to protect the API surface.}
+      \resumeItem{Increased deployment stability by setting up \textbf{CI/CD} pipelines (e.g., GitHub Actions) and containerized configurations, enabling repeatable builds, automated tests, and continuous delivery to \textbf{Vercel}.}
+      \resumeItem{Delivered a responsive, accessible frontend using \textbf{React}, \textbf{TailwindCSS}, and \textbf{Framer Motion}, collaborating closely between frontend and backend layers to ensure consistent API integration and error handling.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListStart
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {\href{https://www.algonquincollege.com/sat/program/web-development-internet-applications/}{Algonquin College}}{Apr 2025}
+    {Diploma in Web Development and Internet Applications}{Ottawa, Canada}
+    \resumeItemListStart
+      \resumeItem{Completed coursework in \textbf{Object-Oriented Programming} (Java, C\#), data structures, and software engineering, applying design patterns and SOLID principles to team-based projects.}
+      \resumeItem{Built backend-focused team projects using \textbf{Java}/\textbf{C\#}, \textbf{REST APIs}, and relational databases, collaborating via \textbf{Git}, code reviews, and \textbf{Agile} ceremonies (standups, sprint planning).}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
