@@ -1,0 +1,127 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
+  \href{https://saidaltan.com?utm_source=osi\&utm_medium=resume}{saidaltan.com} & (343) 988-3084 \\
+  \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid} & \href{https://github.com/altansaid}{github.com/altansaid} \\
+\end{tabular*}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\href{https://arbithub.com/}{Arbitrage Cyclops}}{July 2025 -- Present}
+      {Software Developer}{Remote}
+      \resumeItemListStart
+        \resumeItem{Architected a responsive \textbf{React} frontend with \textbf{Redux-Saga}, enhancing user engagement through dynamic filtering and optimal performance (<\textbf{350ms} queries).}
+        \resumeItem{Engineered an AI-driven profit analysis engine using \textbf{OpenAI GPT-3.5}, reducing manual validation time by \textbf{80\%}, showcasing innovation and problem-solving skills.}
+        \resumeItem{Deployed scalable backend infrastructure with \textbf{Firebase Functions} and \textbf{Google Cloud}, ensuring \textbf{99.9\%} uptime and demonstrating operational excellence.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://solace.com}{Solace}}{September 2024 -- December 2024}
+      {Web Developer Intern}{Ottawa, Canada}
+      \resumeItemListStart
+        \resumeItem{Developed a reusable \textbf{JavaScript}/\textbf{jQuery} plugin, improving enterprise navigation and reducing bounce rate by \textbf{42\%}.}
+        \resumeItem{Collaborated in Agile sprints, participating in backlog grooming and CI/CD workflows, ensuring software quality and maintainability.}
+        \resumeItem{Enhanced UI/UX with \textbf{Figma} and \textbf{Adobe} tools, improving visual consistency and user experience across internal sites.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\textbf{PLAB2 Practice Platform}}{\href{https://plab2practice.com}{Live Demo} | \href{https://github.com/altansaid/plab2projectnew}{GitHub}}
+      {Real-time Collaborative Platform}{}
+      \resumeItemListStart
+        \resumeItem{Built a real-time collaborative platform with role-based sessions, supporting \textbf{500+} users with <\textbf{200ms} latency, demonstrating leadership and innovation.}
+        \resumeItem{Implemented \textbf{JWT}-secured authentication and role-based access control, ensuring data security and operational excellence.}
+        \resumeItem{Optimized scalability with Dockerized deployments and \textbf{PostgreSQL}, aligning with cloud-native engineering practices.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Interview Coach AI}}{\href{https://interviewcoach-ai.vercel.app}{Live Demo} | \href{https://github.com/altansaid/interviewcoach-ai}{GitHub}}
+      {Full-Stack Interview Preparation Tool}{}
+      \resumeItemListStart
+        \resumeItem{Developed a cloud-native \textbf{MERN} platform with Google's \textbf{Gemini AI}, generating personalized interview questions to enhance user preparation.}
+        \resumeItem{Implemented secure authentication with \textbf{JWT} and \textbf{Google OAuth}, ensuring robust user data protection.}
+        \resumeItem{Enhanced UX with \textbf{TailwindCSS} and \textbf{WCAG}-compliant patterns, focusing on accessibility and user engagement.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{Technical Skills}
+  \resumeItemListStart
+    \resumeItem{\textbf{Languages:} JavaScript, CSS, TypeScript, Java, C\#, PHP, SQL, HTML5}
+    \resumeItem{\textbf{Frameworks:} React, Next.js, Redux, Node.js, Angular, TailwindCSS, Material UI}
+    \resumeItem{\textbf{Tools:} Docker, Git, Agile, CI/CD, Figma, Adobe Photoshop, Adobe Illustrator}
+    \resumeItem{\textbf{Cloud \& Databases:} Google Cloud Platform, Firebase, Firestore, PostgreSQL, MongoDB, Render, Vercel}
+  \resumeItemListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.algonquincollege.com/sat/program/web-development-internet-applications/}{Algonquin College of Applied Arts and Technology}}{Apr 2025}
+      {Diploma in Web Development and Internet Applications; Dean's Honour List, \textbf{GPA: 3.77}}{Ottawa, ON}
+  \resumeSubHeadingListEnd
+
+\end{document}
