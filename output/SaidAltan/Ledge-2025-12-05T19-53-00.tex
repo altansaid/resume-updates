@@ -1,0 +1,129 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
+  \href{https://saidaltan.com?utm_source=osi\&utm_medium=resume}{saidaltan.com} & (343) 988-3084 \\
+  \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid} & \href{https://github.com/altansaid}{github.com/altansaid} \\
+\end{tabular*}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\href{https://arbithub.com/}{Arbitrage Cyclops}}{Jul 2025 -- Present}
+      {Software Developer}{Remote}
+      \resumeItemListStart
+        \resumeItem{Architected and shipped a full-stack SaaS platform end-to-end, leading the \textbf{React} frontend with \textbf{Redux} for high-performance profit dashboards, dynamic filtering (20+ parameters), and CSV export to help users discover profitable products 10--20 hours faster per week.}
+        \resumeItem{Engineered a responsive, \textbf{Tailwind CSS}--based UI optimized for $<350$ms debounced queries and large datasets (10,000+ products), improving perceived performance and enabling smooth exploration across complex result sets.}
+        \resumeItem{Collaborated across product and engineering to define frontend architecture and data contracts, integrating React with Go and \textbf{Firebase/Firestore} microservices and achieving a \textbf{70\%} improvement in data retrieval speed through indexed pagination and lazy loading.}
+        \resumeItem{Implemented secure, production-ready flows including authenticated dashboards, PCI-compliant \textbf{Stripe} payment experiences, and automated email engagement, contributing to \textbf{99.9\%} uptime on Google Cloud--hosted services.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://solace.com}{Solace}}{Sep 2024 -- Dec 2024}
+      {Web Developer Intern}{Ottawa, Canada}
+      \resumeItemListStart
+        \resumeItem{Developed and deployed a reusable JavaScript/jQuery Table of Contents plugin for enterprise knowledge bases, improving navigation speed and reducing bounce rate by \textbf{42\%} across high-traffic content.}
+        \resumeItem{Improved SEO and accessibility of internal and external sites by addressing Lighthouse audit findings, consistently raising performance and accessibility scores into the \textbf{90+} range.}
+        \resumeItem{Built an internal employee engagement microsite using \textbf{PHP}, REST APIs, and Bootstrap, enabling modular content reuse across departments and increasing participation in initiatives by \textbf{50\%}.}
+        \resumeItem{Collaborated in Agile sprints with designers and developers, contributing to backlog grooming, peer reviews, and CI/CD workflows while resolving Node.js environment mismatches that cut build and deployment failures by \textbf{80\%}.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\textbf{PLAB2 Practice Platform}}{\href{https://plab2practice.com}{Live Demo} | \href{https://github.com/altansaid/plab2projectnew}{GitHub}}
+      {Real-time Collaborative Platform}{}
+      \resumeItemListStart
+        \resumeItem{Built a production-ready real-time practice platform for PLAB2 exam prep with role-based Doctor, Patient, and Observer sessions, supporting \textbf{500+} active users in a cloud deployment.}
+        \resumeItem{Led the frontend implementation using \textbf{React}, \textbf{TypeScript}, Tailwind CSS, and Material UI to deliver accessible, responsive interfaces for timed consultations, randomized cases, and structured feedback flows.}
+        \resumeItem{Integrated a Spring Boot backend via REST and WebSockets (STOMP), achieving sub-\textbf{200ms} real-time synchronization between participants and deploying the frontend on Vercel under the plab2practice.com domain.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{AI-Powered Interview App}}{\href{https://interviewcoach-ai.vercel.app}{Live Demo} | \href{https://github.com/altansaid/interviewcoach-ai}{GitHub}}
+      {Full-Stack Interview Preparation Tool}{}
+      \resumeItemListStart
+        \resumeItem{Developed a cloud-native MERN application that uses Google's \textbf{Gemini AI} to generate personalized interview questions, explanations, and progress tracking for candidates.}
+        \resumeItem{Implemented a secure, frictionless authentication experience with \textbf{JWT}, Google OAuth, and a fully modal-based password reset flow to keep users in context while managing account access.}
+        \resumeItem{Designed a responsive, WCAG-compliant UI with \textbf{Tailwind CSS} and Framer Motion, enhancing engagement through smooth interactions and intuitive note-taking, pinning, and review workflows.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{Technical Skills}
+  \resumeItemListStart
+    \resumeItem{\textbf{Languages:} TypeScript, JavaScript, Java, C\#, PHP, SQL, HTML5, CSS3}
+    \resumeItem{\textbf{Frameworks \& Tools:} React, Redux, Tailwind CSS, Next.js (familiar), Material UI, Bootstrap, Spring Boot, Node.js, Express, ASP.NET Core, Laravel, Livewire}
+    \resumeItem{\textbf{Cloud \& Databases:} Firestore, Firebase, PostgreSQL, MongoDB, MySQL, Google Cloud Platform, Vercel, Render, Supabase, Netlify}
+    \resumeItem{\textbf{Other:} Git, Docker, ESLint, Prettier, Jira, Figma, Adobe Photoshop, Adobe Illustrator, Linux CLI, NVM, Homebrew}
+  \resumeItemListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.algonquincollege.com/sat/program/web-development-internet-applications/}{Algonquin College of Applied Arts and Technology}}{Apr 2025}
+      {Diploma in Web Development and Internet Applications; Dean's Honour List, \textbf{GPA: 3.77}}{Ottawa, ON}
+  \resumeSubHeadingListEnd
+
+\end{document}
