@@ -1,0 +1,133 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
+  \href{https://saidaltan.com?utm_source=skip\&utm_medium=resume}{saidaltan.com} & (343) 988-3084 \\
+  \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid} & \href{https://github.com/altansaid}{github.com/altansaid} \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.algonquincollege.com/sat/program/web-development-internet-applications/}{Diploma in Web Development and Internet Applications}}{Apr 2025}
+      {Algonquin College of Applied Arts and Technology; Dean's Honour List, \textbf{GPA: 3.77}}{Ottawa, ON}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\href{https://solace.com}{Solace}}{Sep 2024 -- Dec 2024}
+      {Web Developer Intern}{Ottawa, Canada}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented reusable front-end UI components and a custom hierarchical Table of Contents plugin using HTML, CSS, PHP, and jQuery, improving deep navigation on long-form content by \textbf{~42\%} based on Hotjar and Google Analytics, and directly supporting better \textbf{business outcomes} for marketing campaigns.}
+        \resumeItem{Took ownership of an internal HR microsite from UX design in Figma through front-end development in WordPress (HTML, CSS, JavaScript/jQuery), delivering a responsive UI that drove \textbf{~50\% YoY traffic growth} and eliminated the need for an outsourced third-party solution.}
+        \resumeItem{Identified problem causality and root causes for CI/CD deployment failures on Node.js--Gatsby sites by collaborating with senior engineers, diagnosing a runtime incompatibility after version upgrades, and implementing a stable configuration that restored \textbf{reliable builds}.}
+        \resumeItem{Contributed to UI development quality by tuning performance, accessibility, and SEO with Lighthouse and WCAG-aligned patterns, prioritizing and implementing changes that kept enterprise marketing properties fast, standards-compliant, and \textbf{maintainable}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://arbithub.com/}{Arbitrage Cyclops}}{Jul 2025 -- Present}
+      {Software Developer (Volunteer Contributor)}{Remote}
+      \resumeItemListStart
+        \resumeItem{Designed and developed front-end UI components for a data-heavy B2B SaaS platform using \textbf{React}, TypeScript (partial), and TailwindCSS, focusing on clear presentation of large product datasets and responsive UI development aligned with \textbf{business outcomes} for Amazon arbitrage sellers.}
+        \resumeItem{Architected and implemented scalable navigation and pagination flows for inventory views exceeding \textbf{10,000 products}, integrating cleanly with RESTful APIs and ensuring predictable state management so users could efficiently identify \textbf{competitive advantages} across marketplaces.}
+        \resumeItem{Collaborated with backend engineers to define and refine API contracts, contributing to system design discussions and implementing front-end logic that cleanly separates data retrieval from presentation, while maintaining \textbf{code quality} and consistency in a remote, process-driven environment.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\textbf{PLAB2 Practice Platform}}{}
+      {React, TypeScript, Spring Boot, PostgreSQL}
+      {}
+      \resumeItemListStart
+        \resumeItem{Designed and developed a responsive front-end UI in \textbf{React and TypeScript} for a real-time PLAB2 exam preparation platform, implementing role-based views (Doctor, Patient, Observer) that translate complex workflows into intuitive \textbf{enterprise web application} interfaces.}
+        \resumeItem{Implemented and consumed more than \textbf{60 Spring Boot RESTful APIs} backed by a relational PostgreSQL database, aligning front-end components with backend contracts and SQL-backed data models to ensure reliable session management, feedback flows, and data integrity.}
+        \resumeItem{Performed system design and specification development for real-time collaboration features using WebSockets, including program logic and flow-charting for timed consultations and synchronized session state, supporting over \textbf{500 active users} in a production environment.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Interview Coach AI}}{}
+      {React, Node.js, Express, MongoDB}
+      {}
+      \resumeItemListStart
+        \resumeItem{Developed a responsive front-end in \textbf{React} with TailwindCSS and Framer Motion for an AI-powered interview preparation platform, focusing on UI development that keeps complex question, note-taking, and progress-tracking workflows clear and accessible across devices.}
+        \resumeItem{Designed and implemented RESTful APIs in a \textbf{Node.js/Express} backend and integrated them with the React UI, managing authentication (JWT, Google OAuth) and user data flows to provide a reliable, production-style experience aligned with enterprise web application practices.}
+        \resumeItem{Improved reliability and delivery quality by using \textbf{Git-based workflows}, CI/CD pipelines, and Dockerized configurations, enabling repeatable deployments and structured collaboration similar to corporate, process-driven environments.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------SKILLS-----------------
+\section{Technical Skills}
+  \resumeItemListStart
+    \resumeItem{\textbf{Languages:} HTML, TypeScript, JavaScript, CSS, SQL, Java, PHP, C\#}
+    \resumeItem{\textbf{Frameworks \& Tools:} React, jQuery, AJAX, Responsive UI/UX, TailwindCSS, Material UI, Bootstrap, Redux, Spring Boot, Node.js, Express, ASP.NET Core, Laravel, Livewire, RESTful APIs}
+    \resumeItem{\textbf{Developer Tools \& Platforms:} Git, Eclipse (familiar), Docker, Maven (familiar), ANT (familiar), JBOSS (familiar), SOAP UI (familiar), Linux CLI, NVM, Homebrew, Figma, Lighthouse, Hotjar, Google Analytics}
+    \resumeItem{\textbf{Cloud \& Databases:} PostgreSQL, MySQL, MongoDB, Oracle (familiar), SQL Server (familiar), Supabase, Render, Vercel, Netlify, Google Cloud Platform}
+  \resumeItemListEnd
+
+
+
+\end{document}
