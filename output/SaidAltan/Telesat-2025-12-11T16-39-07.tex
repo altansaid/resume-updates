@@ -1,0 +1,130 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
+  \href{https://saidaltan.com?utm_source=skip\&utm_medium=resume}{saidaltan.com} & (343) 988-3084 \\
+  \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid} & \href{https://github.com/altansaid}{github.com/altansaid} \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.algonquincollege.com/sat/program/web-development-internet-applications/}{Diploma in Web Development and Internet Applications}}{Apr 2025}
+      {Algonquin College of Applied Arts and Technology; Dean's Honour List, \textbf{GPA: 3.77}}{Ottawa, ON}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\href{https://solace.com}{Solace}}{Sep 2024 -- Dec 2024}
+      {Web Developer Intern}{Ottawa, Canada}
+      \resumeItemListStart
+        \resumeItem{Collaborated with a \textbf{multi-disciplinary Web Team} to translate marketing and HR system requirements into design specifications and reusable WordPress components in PHP and jQuery, improving deep navigation on long-form content by \textbf{~42\%} based on structured Hotjar and Google Analytics observations.}
+        \resumeItem{Developed and maintained an internal HR microsite end-to-end--clarifying work planned with stakeholders, implementing source code following established standards, and iterating on SEO and accessibility--driving \textbf{~50\% YoY traffic growth} and eliminating the need for a third-party solution.}
+        \resumeItem{Participated in \textbf{Agile workflows} and CI/CD troubleshooting with senior engineers to diagnose and debug Node.js--Gatsby deployment failures, identifying a runtime incompatibility and restoring stable, repeatable builds while providing clear status updates to the team.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://arbithub.com/}{Arbitrage Cyclops}}{Jul 2025 -- Present}
+      {Software Developer (Volunteer Contributor)}{Remote}
+      \resumeItemListStart
+        \resumeItem{Contributed to a data-heavy, distributed B2B SaaS platform by redesigning and developing the \textbf{React + Tailwind} landing and core UI, aligning with defined system operations requirements to communicate complex marketplace pricing and arbitrage workflows more clearly for sellers.}
+        \resumeItem{Worked closely with backend engineers to design and review API contracts and front--back integration patterns, ensuring that React components, \textbf{REST API calls}, and state management followed consistent design specifications and clean separation of concerns.}
+        \resumeItem{Architected a scalable navigation and pagination model for datasets exceeding \textbf{10,000 products}, optimizing how data is requested and rendered to support reliable, highly-available multi-page inventory views and reduce friction for users exploring large result sets.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\textbf{PLAB2 Practice Platform}}{}%
+      {Java, Spring Boot, React, PostgreSQL}{}
+      \resumeItemListStart
+        \resumeItem{Developed and maintained a full-stack, cloud-ready platform for real-time PLAB2 exam preparation, using \textbf{Java and Spring Boot} on the backend and React on the frontend to support over \textbf{500 active users} in a production environment.}
+        \resumeItem{Designed modular Spring Boot REST services and more than \textbf{60 API endpoints} based on clear system requirements and design specifications, implementing JWT-secured authentication, role-based access control, and PostgreSQL data models with Flyway migrations for data integrity.}
+        \resumeItem{Implemented \textbf{WebSockets (STOMP)} for real-time synchronization of session state across distributed clients and Dockerized the environment for reproducible deployments on Render and Vercel, supporting highly-available, low-latency collaboration under typical load.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Interview Coach AI}}{}%
+      {Node.js, Express, React, MongoDB}{}
+      \resumeItemListStart
+        \resumeItem{Developed a cloud-native MERN application that integrates \textbf{Google's Gemini API} to generate personalized interview questions, designing and implementing RESTful APIs and frontend flows aligned with documented system operations and user requirements.}
+        \resumeItem{Implemented secure authentication and authorization using \textbf{JWT, Google OAuth, and bcrypt}, along with an email-based password reset flow, to provide reliable, fault-tolerant access control similar to production systems.}
+        \resumeItem{Improved reliability and deployment confidence by using Docker-based configurations, \textbf{CI/CD pipelines}, and targeted testing and debugging, supporting structured, process-driven delivery of new features and fixes.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------SKILLS-----------------
+\section{Technical Skills}
+  \resumeItemListStart
+    \resumeItem{\textbf{Languages:} Java, C\#, JavaScript, TypeScript, PHP, SQL}
+    \resumeItem{\textbf{Frameworks \& Tools:} Spring Boot, ASP.NET Core, React, Node.js, Express, REST APIs, JWT, OAuth}
+    \resumeItem{\textbf{Practices \& Platforms:} Docker, Git, CI/CD, Agile, Scrum, WordPress, TailwindCSS, PostgreSQL}
+    \resumeItem{\textbf{Cloud \& Databases:} PostgreSQL, MongoDB, Render, Vercel, Supabase, Google Cloud Platform}
+  \resumeItemListEnd
+
+
+
+\end{document}
