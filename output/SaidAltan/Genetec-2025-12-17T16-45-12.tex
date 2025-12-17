@@ -1,0 +1,131 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
+  \href{https://saidaltan.com?utm_source=skip\&utm_medium=resume}{saidaltan.com} & (343) 988-3084 \\
+  \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid} & \href{https://github.com/altansaid}{github.com/altansaid} \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.algonquincollege.com/sat/program/web-development-internet-applications/}{Diploma in Web Development and Internet Applications}}{Apr 2025}
+      {Algonquin College of Applied Arts and Technology; Dean's Honour List, \textbf{GPA: 3.77}}{Ottawa, ON}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\href{https://solace.com}{Solace}}{Sep 2024 -- Dec 2024}
+      {Web Developer Intern}{Ottawa, Canada}
+      \resumeItemListStart
+        \resumeItem{Delivered reusable \textbf{JavaScript} components for production web platforms, applying \textbf{object-oriented programming} principles (encapsulation via modules, clear interfaces) to keep interaction logic maintainable and testable across pages.}
+        \resumeItem{Collaborated with designers, content authors, and QA in \textbf{Agile} sprints to analyze requirements, implement features, and support regression checks; added basic \textbf{Jest} tests for high-traffic pages to improve release confidence.}
+        \resumeItem{Improved performance and accessibility by iterating on semantic HTML and interaction patterns, raising Lighthouse performance/accessibility scores to \textbf{90+} on targeted pages.}
+        \resumeItem{Diagnosed and resolved production issues related to \textbf{Node.js} runtime and \textbf{CI/CD} pipeline behavior, working with engineers to restore stable deployments and reduce repeat failures.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://arbithub.com/}{Arbitrage Cyclops}}{Jul 2025 -- Present}
+      {Volunteer Developer}{Remote}
+      \resumeItemListStart
+        \resumeItem{Built and maintained \textbf{React} dashboards for data-heavy browsing (filtering, pagination, detail views) operating over \textbf{10k+} product records, improving usability for large result sets.}
+        \resumeItem{Introduced incremental \textbf{TypeScript} adoption for shared components and state slices, improving type safety and catching regressions earlier during code reviews.}
+        \resumeItem{Optimized Firestore-backed data access using indexed queries, debounced search, and memoized selectors to improve perceived responsiveness for large datasets on desktop and mobile.}
+        \resumeItem{Integrated React views with \textbf{REST} endpoints and \textbf{Node.js} services; contributed to deploying static assets via AWS (S3/CloudFront) for more reliable delivery.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\textbf{PLAB2 Practice Platform}}{}
+      {Java, Spring Boot, WebSocket, Docker}
+      {}
+      \resumeItemListStart
+        \resumeItem{Designed and built a modular \textbf{Java}/Spring Boot backend (\textbf{60+} REST endpoints) using object-oriented programming (OOP) patterns (e.g., SOLID, interfaces) and a layered architecture to support future feature expansion.}
+        \resumeItem{Implemented real-time, role-based consultation sessions via \textbf{WebSocket} to keep participants synchronized in under \textbf{200ms} on typical connections (timers, state transitions, coordinated actions).}
+        \resumeItem{Deployed \textbf{Dockerized} services to a production cloud environment and maintained a live platform used by \textbf{165} active users, incorporating feedback to guide ongoing improvements.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Interview Coach AI}}{}
+      {Node.js, Express, React, MongoDB}
+      {}
+      \resumeItemListStart
+        \resumeItem{Built RESTful \textbf{Node.js}/Express APIs backed by \textbf{MongoDB} to store user sessions, generated question sets, and preferences for an AI interview practice workflow.}
+        \resumeItem{Implemented secure authentication using \textbf{JWT} and \textbf{Google OAuth} to protect user data while keeping login friction low.}
+        \resumeItem{Standardized builds with simple \textbf{CI/CD} steps using \textbf{GitHub Actions} and Docker images to keep environments consistent.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{Technical Skills}
+  \resumeItemListStart
+    \resumeItem{\textbf{Languages:} }
+    \resumeItem{\textbf{Frameworks \& Tools:} }
+    \resumeItem{\textbf{Testing \& Practices:} }
+    \resumeItem{\textbf{Cloud \& Databases:} }
+  \resumeItemListEnd
+
+\end{document}
