@@ -1,0 +1,131 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
+  \href{https://saidaltan.com?utm_source=skip\&utm_medium=resume}{saidaltan.com} & (343) 988-3084 \\
+  \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid} & \href{https://github.com/altansaid}{github.com/altansaid} \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.algonquincollege.com/sat/program/web-development-internet-applications/}{Diploma in Web Development and Internet Applications}}{Apr 2025}
+      {Algonquin College of Applied Arts and Technology; Dean's Honour List, \textbf{GPA: 3.77}}{Ottawa, ON}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\href{https://solace.com}{Solace}}{Sep 2024 -- Dec 2024}
+      {Software Developer Co-op -- Web Platforms}{Ottawa, Canada}
+      \resumeItemListStart
+        \resumeItem{Participer à la livraison de fonctionnalités production sur une plateforme moderne en implémentant des composants réutilisables et une logique d'interaction robuste (\textbf{TypeScript}/\textbf{React}), réduisant les régressions sur des pages critiques.}
+        \resumeItem{Analyser et résoudre des incidents en production liés à des upgrades de framework, changements runtime et workflows de déploiement; collaborer avec les ingénieurs pour restaurer la \textbf{fiabilité} et prévenir des \textbf{échecs de déploiement} récurrents.}
+        \resumeItem{Designer et implémenter un système de navigation/interaction state-driven pour des pages long-form, améliorant l'\textbf{utilisabilité} et la \textbf{découvrabilité} du contenu pour les utilisateurs finaux.}
+        \resumeItem{Contribuer à la qualité dans le cycle de développement via itérations guidées par audits \textbf{Lighthouse} (performance, accessibilité, SEO) et alignement avec les \textbf{parties prenantes} (produit/ingénierie) pour livrer à temps.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://arbithub.com/}{Arbitrage Cyclops}}{Jul 2025 -- Present}
+      {Frontend Software Developer (Volunteer)}{Remote}
+      \resumeItemListStart
+        \resumeItem{Collaborer avec le product owner (parties prenantes) pour analyser les besoins et livrer des écrans \textbf{React}/\textbf{TypeScript} orientés workflows, en gardant une approche pragmatique sur les priorités produit.}
+        \resumeItem{Implémenter des patterns UI pour pages data-heavy (navigation, filtering, pagination) afin d'améliorer la \textbf{fiabilité d'usage} et l'\textbf{efficacité de navigation} sur de grands volumes de résultats.}
+        \resumeItem{Améliorer l'intégration \textbf{REST} en alignant les besoins UI avec les réponses \textbf{backend} existantes, simplifiant les patterns de requêtes et réduisant la complexité côté client.}
+        \resumeItem{Contribuer à une expérience plus stable et performante via optimisations de rendu et state management prévisible (\textbf{React}/\textbf{Redux}), adaptées à des données volumineuses.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\textbf{PLAB2 Practice Platform}}{}
+      {Java, Spring Boot, WebSocket, Docker}
+      {}
+      \resumeItemListStart
+        \resumeItem{Designer et implémenter une plateforme moderne full-stack avec un backend \textbf{Java}/\textbf{Spring Boot} (60+ endpoints REST) pour gérer le cycle de vie des sessions (création via code, progression, transitions d'état) et supporter des flux multi-utilisateurs en temps réel.}
+        \resumeItem{Implémenter un comportement synchronisé en temps réel (\textbf{WebSocket}) avec timers partagés et transitions coordonnées, assurant une expérience \textbf{fiable} malgré des clients concurrents (logique d'état et cohérence).}
+        \resumeItem{Déployer en production des services \textbf{dockerisés} et maintenir l'opérationnel via monitoring d'uptime, en prenant ownership de la \textbf{livraison de bout en bout} (build → deploy → run).}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Interview Coach AI}}{}
+      {Node.js, Express, MongoDB, Next.js}
+      {}
+      \resumeItemListStart
+        \resumeItem{Concevoir et livrer des APIs REST (\textbf{Node.js}/\textbf{Express}) pour gérer le cycle de vie des sessions utilisateur (création, sauvegarde, reprise) et la persistance des contenus dans MongoDB.}
+        \resumeItem{Implémenter une authentification sécurisée (\textbf{JWT} + \textbf{Google OAuth}) pour protéger les données et simplifier l'accès, avec une approche qualité-minded sur les flux d'identité.}
+        \resumeItem{Travailler avec une API LLM pour générer des contenus structurés à partir d'inputs utilisateur, en gardant une logique \textbf{backend} claire et \textbf{maintenable}.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{Technical Skills}
+  \resumeItemListStart
+    \resumeItem{\textbf{Languages:} Java, TypeScript, JavaScript, C\#, SQL, PHP}
+    \resumeItem{\textbf{Frameworks \& Tools:} Spring Boot, Spring Security, React, Next.js, Express, Node.js, ASP.NET Core}
+    \resumeItem{\textbf{Testing \& Practices:} Docker, Git, CI/CD, Linux, Jira, WebSocket, REST APIs}
+    \resumeItem{\textbf{Cloud \& Databases:} PostgreSQL, MongoDB, Google Cloud Platform, Supabase, Render, Vercel}
+  \resumeItemListEnd
+
+\end{document}
