@@ -1,0 +1,129 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
+  \href{https://saidaltan.com?utm_source=skip\&utm_medium=resume}{saidaltan.com} & (343) 988-3084 \\
+  \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid} & \href{https://github.com/altansaid}{github.com/altansaid} \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.algonquincollege.com/sat/program/web-development-internet-applications/}{Diploma in Web Development and Internet Applications}}{Apr 2025}
+      {Algonquin College of Applied Arts and Technology; Dean's Honour List, \textbf{GPA: 3.77}}{Ottawa, ON}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Solace}{2024-09 -- 2024-12}
+      {Software Developer Co-op -- Web Platforms}{Ottawa, Canada}
+      \resumeItemListStart
+        \resumeItem{Developed and maintained production web platforms using \textbf{TypeScript}, JavaScript, React, and Gatsby by implementing reusable application-level components and interaction logic to improve consistency and reduce \textbf{regressions} across live pages.}
+        \resumeItem{Redesigned a complex in-page navigation system by restructuring state-driven UI flows for long-form, information-dense pages, improving \textbf{usability} and content discoverability for end users.}
+        \resumeItem{Resolved critical \textbf{production issues} by collaborating with engineers to diagnose framework upgrade/runtime/deployment workflow problems, restoring platform stability and preventing recurring deployment failures.}
+        \resumeItem{Improved \textbf{performance}, accessibility (WCAG), and SEO by iterating on client-side implementations based on Lighthouse audits and engineering best practices, delivering faster load times and stronger standards compliance.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Arbitrage Cyclops}{2025-07 -- Present}
+      {Frontend Software Developer (Volunteer)}{Remote}
+      \resumeItemListStart
+        \resumeItem{Built and refined end-to-end React + \textbf{TypeScript} pages with TailwindCSS, translating product requirements into clean, responsive UI optimized for seller workflows.}
+        \resumeItem{Enhanced \textbf{usability} for data-heavy browsing pages by implementing responsive navigation, filtering, and pagination patterns to help users explore large product result sets more efficiently.}
+        \resumeItem{Optimized \textbf{REST APIs} consumption by aligning UI data needs with backend responses, simplifying request patterns and reducing frontend complexity.}
+        \resumeItem{Collaborated directly with the \textbf{product owner} to iterate on feature ideas, validate UI decisions, and adapt implementations to evolving backend capabilities.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\textbf{PLAB2 Practice Platform}}{}
+      {React, TypeScript, Spring Boot, PostgreSQL}{}
+      \resumeItemListStart
+        \resumeItem{Built a full-stack, real-time practice platform enabling live, role-based consultation sessions with synchronized timers and state transitions using \textbf{WebSocket} for multi-user coordination.}
+        \resumeItem{Implemented secure authentication and role-based access using \textbf{JWT} and Spring Security, supporting separate user and admin dashboards while keeping session join flows lightweight.}
+        \resumeItem{Deployed \textbf{Dockerized} services to a production cloud environment and maintained a live platform used by \textbf{165 active users} preparing for PLAB 2.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Interview Coach AI}}{}
+      {Next.js, Node.js, Express, MongoDB}{}
+      \resumeItemListStart
+        \resumeItem{Built a full-stack \textbf{Next.js} application that generates personalized interview question sets via an LLM API, turning user context into structured prompts for realistic practice flows.}
+        \resumeItem{Implemented secure authentication with \textbf{JWT} and Google OAuth plus a user dashboard for organizing, pinning, and revisiting generated interview sets by role.}
+        \resumeItem{Designed \textbf{RESTful APIs} with Node.js and Express backed by MongoDB to persist user sessions, questions, and preferences.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{Technical Skills}
+  \resumeItemListStart
+    \resumeItem{\textbf{Languages:} TypeScript, JavaScript, Java, PHP, C\#, SQL}
+    \resumeItem{\textbf{Frameworks \& Tools:} Next.js, React, Redux, TailwindCSS, Spring Boot, Spring Security, Node.js, Express}
+    \resumeItem{\textbf{Tools:} Docker, Git, Jira, Figma, Lighthouse, Hotjar, Google Analytics, Linux CLI}
+    \resumeItem{\textbf{Cloud \& Databases:} PostgreSQL, MongoDB, Google Cloud Platform, Vercel, Netlify, Supabase}
+  \resumeItemListEnd
+
+\end{document}
