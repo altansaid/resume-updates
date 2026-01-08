@@ -1,0 +1,129 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large Said Altan} & \href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} \\
+  \href{https://saidaltan.com?utm_source=skip\&utm_medium=resume}{saidaltan.com} & (343) 988-3084 \\
+  \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid} & \href{https://github.com/altansaid}{github.com/altansaid} \\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.algonquincollege.com/sat/program/web-development-internet-applications/}{Diploma in Web Development and Internet Applications}}{Apr 2025}
+      {Algonquin College of Applied Arts and Technology; Dean's Honour List, \textbf{GPA: 3.77}}{Ottawa, ON}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Solace}{2024-09 -- 2024-12}
+      {Software Developer Co-op -- Web Platforms}{Ottawa, Canada}
+      \resumeItemListStart
+        \resumeItem{Enhanced application performance, accessibility, and SEO compliance by iterating on client-side implementations based on Lighthouse audits and engineering best practices, resulting in \textbf{faster load times} and improved web standards compliance.}
+        \resumeItem{Resolved \textbf{critical production issues} affecting live web platforms by collaborating with engineers to diagnose problems related to framework upgrades, runtime changes, and deployment workflows, restoring platform stability and reducing recurring deployment failures.}
+        \resumeItem{Created a custom internal web platform by translating \textbf{Figma designs} into a fully functional application with dynamic, configurable sections, enabling a company-wide seasonal initiative used by multiple teams.}
+        \resumeItem{Maintained reusable application-level components for content-driven pages using \textbf{JavaScript}, HTML, and CSS, improving consistency across production pages and reducing regression issues during updates.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Arbitrage Cyclops}{2025-07 -- Present}
+      {Frontend Software Developer (Volunteer)}{Remote}
+      \resumeItemListStart
+        \resumeItem{Eliminated pagination wait times during product exploration by implementing deterministic prefetching of adjacent result pages, reducing \textbf{multi-second} page transitions to \textbf{near-instant} navigation for large datasets.}
+        \resumeItem{Increased reliability of asynchronous product fetching by detecting and discarding stale responses in \textbf{Redux Sagas} and coordinating fetch/prefetch lifecycles with guarded React refs, preventing race conditions under rapid user interactions.}
+        \resumeItem{Optimized large-scale product filtering (\textbf{250K+} records) by restructuring filter execution into an explicit, batched apply flow, reducing redundant network requests and improving responsiveness during multi-criteria filtering.}
+        \resumeItem{Stabilized Firestore-backed, cursor-based pagination by aligning frontend state management with cursor behavior exposed by \textbf{Go backend} services, enabling instant back-navigation and more predictable data flow across page changes.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\textbf{PLAB2 Practice Platform}}{}
+      {React, TypeScript, Java, PostgreSQL}{}
+      \resumeItemListStart
+        \resumeItem{Developed a real-time practice platform enabling users to join shared sessions and simulate timed consultations by implementing synchronized session state over \textbf{WebSocket}, improving realism for remote exam preparation.}
+        \resumeItem{Implemented secure authentication and role-based access using \textbf{JWT} and \textbf{Spring Security}, separating user/admin dashboards while keeping session entry lightweight.}
+        \resumeItem{Deployed Dockerized services to a production environment and maintained a live platform with \textbf{165 users}, supporting stable usage with ongoing iteration based on candidate feedback.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\textbf{Interview Coach AI}}{}
+      {Next.js, Node.js, MongoDB, JavaScript}{}
+      \resumeItemListStart
+        \resumeItem{Created an interview practice platform that generated personalized question sets by transforming user context into structured prompts for an \textbf{LLM API}, improving repeatability of interview prep workflows.}
+        \resumeItem{Implemented secure login and session persistence using \textbf{JWT} and \textbf{Google OAuth} with REST APIs, enabling users to manage and revisit saved interview sets.}
+        \resumeItem{Designed a dashboard experience for organizing, pinning, and favoriting questions, improving usability for ongoing practice across multiple roles.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\section{Technical Skills}
+  \resumeItemListStart
+    \resumeItem{\textbf{Languages:} JavaScript, TypeScript, Java, PHP, C\#, SQL}
+    \resumeItem{\textbf{Frameworks \& Tools:} React, Next.js, Redux, Spring Boot, Node.js, Express, Gatsby, TailwindCSS}
+    \resumeItem{\textbf{Testing \& Practices:} Git, Docker, Linux CLI, Jira, Lighthouse, Figma, Google Analytics, Hotjar}
+    \resumeItem{\textbf{Cloud \& Databases:} PostgreSQL, MongoDB, Firestore, Google Cloud Platform, Vercel, Supabase}
+  \resumeItemListEnd
+
+\end{document}
