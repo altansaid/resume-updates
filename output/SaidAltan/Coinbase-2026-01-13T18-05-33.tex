@@ -1,0 +1,150 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Said Altan} \\ \vspace{1pt}
+    \small Software Developer $|$ {React \& Java} $|$ 
+    {Building data-heavy, user-facing platforms} 
+\end{center}
+
+\begin{center}
+    \small 343-988-3084 $|$ \href{mailto:altansaid13@outlook.com}{\underline{altansaid13@outlook.com}} $|$ 
+    \href{https://linkedin.com/in/saidaltan}{\underline{linkedin.com/in/saidaltan}} $|$
+    \href{https://github.com/altansaid}{\underline{github.com/altansaid}} $|$
+    \href{https://saidaltan.com}{\underline{saidaltan.com}}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Developer (Frontend)}{Jul 2025 -- Present}
+      {Arbitrage Cyclops}{Remote}
+      \resumeItemListStart
+        \resumeItem{Owned and shipped user-facing \textbf{React 18} features for a data-heavy B2B SaaS workflow (filtering, sorting, pagination, detail views), improving usability for large product exploration sessions.}
+        \resumeItem{Eliminated multi-second pagination waits by implementing deterministic prefetching of adjacent result pages, enabling near-instant navigation across large datasets.}
+        \resumeItem{Improved correctness and trust in results by adding cache validation keyed to active filter state and discarding stale async responses in Redux Sagas, preventing race conditions under rapid user interactions.}
+        \resumeItem{Stabilized Firestore cursor-based pagination by aligning component-based UI state with backend cursor behavior (Go services), enabling predictable forward/back navigation and fewer production-only inconsistencies.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Web Developer Intern}{Sep 2024 -- Dec 2024}
+      {Solace}{Ottawa, ON}
+      \resumeItemListStart
+        \resumeItem{Shipped reusable component-based UI improvements across production web platforms using \textbf{JavaScript/TypeScript} and \textbf{React}, reducing regressions by standardizing interaction logic and shared patterns.}
+        \resumeItem{Redesigned a complex in-page navigation system by restructuring state-driven UI flows for long-form pages, improving content discoverability and end-user usability.}
+        \resumeItem{Improved front-end architecture quality via performance, accessibility, and SEO iterations driven by Lighthouse audits, pushing key pages into the \textbf{90+} score range.}
+        \resumeItem{Resolved critical production issues by partnering with engineers across upgrades and deployment workflows (runtime changes, CI/CD failures), restoring platform stability and preventing repeat incidents.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\href{https://plab2practice.com}{\textbf{PLAB2 Practice Platform}} $|$ \emph{React, TypeScript, WebSocket, REST APIs, Spring Boot}}{\href{https://github.com/altansaid/plab2projectnew}{\underline{GitHub}}}
+      \resumeItemListStart
+        \resumeItem{Built and launched a real-time, user-facing web application for live role-based practice sessions; grew to \textbf{165} active users through continuous product iteration and feedback loops.}
+        \resumeItem{Implemented synchronized session UX (shared timers, state transitions, coordinated actions) using React + WebSocket, delivering consistent multi-user behavior under real-time constraints.}
+        \resumeItem{Designed secure authentication and role-based access with JWT + Spring Security, balancing usability with security for lightweight session entry and admin workflows.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://interviewcoach-ai.vercel.app/}{\textbf{Interview Coach AI}} $|$ \emph{Next.js, React, JavaScript, REST APIs, JWT}}{\href{https://github.com/altansaid/interviewcoach-ai}{\underline{GitHub}}}
+      \resumeItemListStart
+        \resumeItem{Shipped a component-based React/Next.js product that generates personalized interview sets via an LLM API, optimizing for fast, repeatable user workflows (dashboards, favorites, saved sets).}
+        \resumeItem{Implemented secure login with JWT and Google OAuth and built REST endpoints for persistence, enabling users to resume sessions and manage saved content reliably.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Algonquin College}{Ottawa, ON}
+      {Diploma, Web Development and Internet Applications}{Sep 2023 -- Apr 2025}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Frontend}{: JavaScript, TypeScript, React, Next.js, Redux (Saga), component-based UI} \\
+     \textbf{Architecture}{: front-end architecture, performance optimization, security, usability, accessibility (WCAG)} \\
+     \textbf{Testing}{: unit testing, integration testing} \\
+     \textbf{APIs \& Realtime}{: REST APIs, WebSocket} \\
+     \textbf{Product Delivery}{: Agile, cross-functional collaboration (PM/Design/Engineering), roadmap execution}
+    }}
+ \end{itemize}
+
+\end{document}
