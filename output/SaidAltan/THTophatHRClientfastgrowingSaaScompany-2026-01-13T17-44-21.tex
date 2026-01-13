@@ -1,0 +1,166 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Said Altan} \\ \vspace{1pt}
+    \small Motivated Full-Stack Software Engineer $|$ \textbf{Node.js}, \textbf{TypeScript}, \textbf{React} $|$ Internal tools, REST APIs, workflow optimization
+\end{center}
+
+\begin{center}
+    \small Ottawa, ON $|$
+    \href{mailto:altansaid13@outlook.com}{\underline{altansaid13@outlook.com}} $|$
+    \href{https://saidaltan.com}{\underline{saidaltan.com}} $|$
+    \href{https://linkedin.com/in/saidaltan}{\underline{linkedin.com/in/saidaltan}} $|$
+    \href{https://github.com/altansaid}{\underline{github.com/altansaid}}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    Collaborative, detail-oriented engineer who takes ownership of internal systems end-to-end (requirements $\rightarrow$ design $\rightarrow$ implementation $\rightarrow$ delivery). Experienced in full-stack development with \textbf{React}, \textbf{Node.js}, \textbf{TypeScript}, \textbf{REST APIs}, and relational data (\textbf{PostgreSQL}); focused on automation, process improvement, and maintainable, well-documented code with testing and code reviews.
+  }}
+\end{itemize}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Algonquin College}{Ottawa, ON}
+    {Diploma, Web Development and Internet Applications}{Sep 2023 -- Apr 2025}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Software Developer (Volunteer Contributor)}{Jul 2025 -- Present}
+    {Arbitrage Cyclops (B2B SaaS)}{Remote}
+    \resumeItemListStart
+      \resumeItem{Took ownership of data-heavy \textbf{React} workflows (filters, sorting, pagination) and optimized end-to-end navigation by implementing deterministic prefetching, reducing multi-second page transitions by \textbf{80\%+} for large result sets.}
+      \resumeItem{Troubleshot production-only inconsistencies by adding cache validation tied to active filter state and discarding stale async responses (Redux Sagas), improving data correctness and eliminating race conditions under rapid user interactions.}
+      \resumeItem{Maintained and improved internal system reliability by aligning frontend state with cursor-based pagination exposed by backend services, enabling near-instant back-navigation and predictable data flow across pages.}
+      \resumeItem{Collaborated with product owners and engineers through \textbf{Git} pull requests and code reviews, iterating quickly on fixes and process improvements to support a fast-moving, dynamic roadmap.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Web Developer Intern}{Sep 2024 -- Dec 2024}
+    {Solace}{Ottawa, ON}
+    \resumeItemListStart
+      \resumeItem{Designed and built internal web applications/tools by translating \textbf{Figma} requirements into a configurable, content-driven platform used company-wide, improving internal workflow execution across multiple teams.}
+      \resumeItem{Troubleshot and maintained production web platforms by diagnosing issues across framework upgrades, runtime changes, and deployment workflows, restoring stability and preventing recurring release failures.}
+      \resumeItem{Optimized performance, accessibility, and SEO using Lighthouse-driven improvements, raising key pages to \textbf{90+} scores and improving compliance with web standards.}
+      \resumeItem{Wrote clean, maintainable code and participated in Agile ceremonies and code reviews, partnering cross-functionally to gather requirements and deliver production-ready features on schedule.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\href{https://interviewcoach-ai.vercel.app/}{\textbf{Interview Coach AI}} $|$ \emph{\textbf{Node.js}, \textbf{TypeScript}, \textbf{React}, REST APIs}}{\href{https://github.com/altansaid/interviewcoach-ai}{\underline{GitHub}}}
+  \resumeItemListStart
+    \resumeItem{Developed an end-to-end full-stack platform with \textbf{Node.js} REST APIs and a \textbf{React} UI to automate interview prep workflows, generating personalized question sets via an LLM API (agentic workflow-style prompt orchestration).}
+    \resumeItem{Implemented secure authentication (JWT + Google OAuth) and persistence for user sessions and saved question sets, improving repeat usage and continuity across practice sessions.}
+    \resumeItem{Maintained clean, well-documented endpoints and modular UI components to support fast iteration and future integrations.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\href{https://plab2practice.com}{\textbf{PLAB2 Practice Platform}} $|$ \emph{\textbf{React}, \textbf{TypeScript}, \textbf{REST APIs}, \textbf{PostgreSQL}}}{\href{https://github.com/altansaid/plab2projectnew}{\underline{GitHub}}}
+  \resumeItemListStart
+    \resumeItem{Designed and built a full-stack, real-time practice platform with \textbf{React + TypeScript}, \textbf{PostgreSQL}, and \textbf{60+} REST endpoints, owning delivery from requirements to production launch.}
+    \resumeItem{Built synchronized session controls (timers, state transitions, role-based flows) to keep participants in sync, improving reliability for live, multi-user sessions.}
+    \resumeItem{Deployed Dockerized services to a production cloud environment with monitoring and a custom domain, supporting \textbf{165} active users and ongoing maintenance.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Core}{: \textbf{Node.js}, \textbf{TypeScript}, \textbf{React}, \textbf{REST APIs}, \textbf{PostgreSQL}, \textbf{Git}} \\
+    \textbf{Testing}{: \textbf{Jest}, \textbf{Vitest}, Unit Testing, Code Reviews} \\
+    \textbf{Cloud/DevOps}{: \textbf{AWS}, Docker, CI/CD} \\
+    \textbf{Frontend}{: Next.js, Redux, Tailwind CSS, Accessibility (WCAG)} \\
+    \textbf{Backend}{: Express, JWT, OAuth} \\
+    \textbf{Datastores}{: PostgreSQL, MongoDB}
+  }}
+\end{itemize}
+
+\end{document}
