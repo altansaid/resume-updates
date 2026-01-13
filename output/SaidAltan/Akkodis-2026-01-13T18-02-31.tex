@@ -1,0 +1,158 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Said Altan} \\ \vspace{1pt}
+    \small Software Developer $|$ {React \& Java} $|$ 
+    {Building data-heavy, user-facing platforms} 
+\end{center}
+
+\begin{center}
+    \small 343-988-3084 $|$ \href{mailto:altansaid13@outlook.com}{\underline{altansaid13@outlook.com}} $|$ 
+    \href{https://linkedin.com/in/saidaltan}{\underline{linkedin.com/in/saidaltan}} $|$
+    \href{https://github.com/altansaid}{\underline{github.com/altansaid}}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Developer (Volunteer)}{Jul 2025 -- Present}
+      {Arbitrage Cyclops}{Remote}
+      \resumeItemListStart
+        \resumeItem{Engineered a data-heavy React 18 frontend with Redux and Redux-Saga, improving large-dataset exploration by implementing deterministic prefetching that reduced multi-second pagination transitions to near-instant navigation across \textbf{250K+} records.}
+        \resumeItem{Hardened REST integration reliability by detecting and discarding stale async responses and coordinating fetch/prefetch lifecycles, reducing race-condition defects during rapid user interactions.}
+        \resumeItem{Improved data correctness for complex filter/sort combinations by adding cache validation tied to active filter state, eliminating stale data reuse and stabilizing production-only pagination inconsistencies.}
+        \resumeItem{Partnered with product owners to troubleshoot production issues and validate fixes through rapid iteration, supporting consistent delivery quality in a B2B SaaS workflow.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Web Developer Intern}{Sep 2024 -- Dec 2024}
+      {Solace}{Ottawa, ON}
+      \resumeItemListStart
+        \resumeItem{Delivered production web enhancements by implementing reusable JavaScript/TypeScript components and resolving defects across release cycles, improving consistency and reducing regression risk on high-traffic pages.}
+        \resumeItem{Improved performance and compliance by iterating on Lighthouse audits and accessibility requirements, achieving \textbf{90+} Lighthouse scores through semantic HTML, keyboard navigation, and responsive layout fixes.}
+        \resumeItem{Troubleshot production issues related to framework upgrades and deployment workflows in CI/CD, restoring platform stability and preventing recurring release failures.}
+        \resumeItem{Collaborated cross-functionally in Agile sprints (engineering, design, QA) to translate requirements into maintainable implementations with clear handoff notes for sustainment.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\href{https://plab2practice.com}{\textbf{PLAB2 Practice Platform}} $|$ \emph{Java, Spring Boot, REST, WebSocket, PostgreSQL, Docker}}{\href{https://github.com/altansaid/plab2projectnew}{\underline{GitHub}}}
+      \resumeItemListStart
+        \resumeItem{Built a production full-stack platform with \textbf{60+} REST API endpoints and real-time WebSocket session synchronization, supporting timed multi-user consultations and role-based workflows.}
+        \resumeItem{Implemented secure authentication and authorization using JWT and Spring Security, separating user/admin access paths and protecting session participation flows.}
+        \resumeItem{Deployed Dockerized services to a cloud environment with monitoring and operational runbooks, sustaining a live platform used by \textbf{165} active users.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\href{https://interviewcoach-ai.vercel.app/}{\textbf{Interview Coach AI}} $|$ \emph{Next.js, Node.js, REST, JWT, OAuth, MongoDB}}{\href{https://github.com/altansaid/interviewcoach-ai}{\underline{GitHub}}}
+      \resumeItemListStart
+        \resumeItem{Developed a full-stack web application with REST services for managing interview sets, favorites, and dashboards, enabling repeatable practice workflows and persistence-backed continuity.}
+        \resumeItem{Implemented secure authentication using JWT and Google OAuth, protecting user data while maintaining a low-friction login experience.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Algonquin College of Applied Arts and Technology}{Ottawa, ON}
+      {Diploma, Web Development and Internet Applications}{Sep 2023 -- Apr 2025}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Integration \& APIs}{: REST, SOAP (familiarity), WebSocket} \\
+     \textbf{.NET}{: C\#, ASP.NET Core (familiarity)} \\
+     \textbf{Scripting/Automation}{: PowerShell (familiarity)} \\
+     \textbf{Languages}{: Java, JavaScript, TypeScript, SQL} \\
+     \textbf{DevOps/Tools}{: Git, Docker}
+    }}
+ \end{itemize}
+
+\end{document}
