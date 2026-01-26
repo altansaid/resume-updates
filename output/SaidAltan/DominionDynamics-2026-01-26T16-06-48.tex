@@ -1,0 +1,193 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://www.sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Said Altan} \\ \vspace{1pt}
+    \small Software Developer $|$ {React \& Java} $|$ 
+    {Building data-heavy, user-facing platforms} 
+\end{center}
+
+\begin{center}
+
+    \small 343-988-3084 $|$ \href{mailto:x@x.com}{\underline{altansaid13@outlook.com}} $|$ 
+    \href{https://linkedin.com/in/altansaid}{\underline{linkedin.com/in/altansaid}} $|$
+    \href{https://github.com/altansaid}{\underline{github.com/altansaid}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Algonquin College of Applied Arts and Technology}{Ottawa, ON}
+      {Web Development and Internet Applications}{Sep 2023 -- April 2025}
+    
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Developer}{Jul 2025 -- Present}
+      {Arbitrage Cyclops}{Remote}
+      \resumeItemListStart
+        \resumeItem{Optimized data-dense \textbf{React 18} workflows for large product datasets (\textbf{250K+ records}) by restructuring filtering into a batched ``apply'' flow, reducing redundant requests and improving responsiveness for operator-like power users.}
+        \resumeItem{Implemented deterministic prefetching for adjacent pagination pages to eliminate \textbf{multi-second} wait times and enable \textbf{near-instant} navigation during high-tempo product exploration.}
+        \resumeItem{Improved reliability of real-time-like async UI updates by detecting/discarding stale responses in \textbf{Redux Sagas} and coordinating fetch/prefetch lifecycles with guarded React refs, preventing \textbf{race conditions} under rapid user interactions.}
+        \resumeItem{Ensured correct rendering across complex filter/sort combinations by tying cache validation to active filter state, preventing \textbf{stale data} reuse and stabilizing \textbf{production behavior}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Web Developer Intern}{Sep 2024 -- Dec 2024}
+      {Solace}{Ottawa, Canada}
+      \resumeItemListStart
+        \resumeItem{Built and maintained production \textbf{React/TypeScript} components for large-scale web platforms, developing reusable application-level UI building blocks to reduce regressions and support \textbf{fast iteration}.}
+        \resumeItem{Redesigned a complex in-page navigation system for long-form, information-dense pages by restructuring state-driven UI flows, improving \textbf{usability} and \textbf{content discoverability} in a performance-focused environment.}
+        \resumeItem{Resolved \textbf{critical production issues} by collaborating cross-functionally to diagnose framework/runtime upgrade impacts and deployment workflow failures, restoring \textbf{stability} and preventing recurring breakages.}
+        \resumeItem{Optimized performance and standards compliance by iterating on client-side implementations based on Lighthouse audits, improving \textbf{load-time} behavior and \textbf{accessibility/SEO} outcomes for production pages.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\href{https://plab2practice.com}{\textbf{PLAB2 Practice Platform}} $|$ \emph{React, TypeScript, TailwindCSS, WebSocket}}{\href{https://github.com/altansaid/plab2projectnew}{\underline{GitHub}}}
+          \resumeItemListStart
+            \resumeItem{Built a \textbf{real-time} operator-centric practice platform in \textbf{React/TypeScript} with WebSocket-driven synchronized sessions, enabling multiple users to join via shared code and stay in lockstep during timed consultations.}
+            \resumeItem{Implemented resilient session controls (shared timers, coordinated state transitions, synchronized actions) to keep clients consistent during live collaboration and \textbf{rapid user interactions}.}
+            \resumeItem{Shipped a production deployment with Dockerized services and a modular Java/Spring Boot backend (60+ REST endpoints), supporting a live platform used by \textbf{165 active users} and iterating based on \textbf{end-user feedback}.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\href{https://interviewcoach-ai.vercel.app/}{\textbf{Interview Coach AI}} $|$ \emph{Next.js, React, Node.js, MongoDB}}{\href{https://github.com/altansaid/interviewcoach-ai}{\underline{GitHub}}}
+          \resumeItemListStart
+            \resumeItem{Developed a full-stack \textbf{Next.js/React} application that generates \textbf{personalized} interview question sets via an LLM API, turning user context into structured prompts for repeatable practice workflows.}
+            \resumeItem{Implemented \textbf{JWT + Google OAuth} authentication and a dashboard for organizing, pinning, and revisiting generated content--supporting \textbf{fast iteration} on user-facing features.}
+            \resumeItem{Built \textbf{Node.js/Express} APIs with \textbf{MongoDB} persistence to store sessions and preferences, enabling reliable retrieval and management of user-generated interview sets.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: TypeScript, JavaScript, Java, SQL, PHP, C\#} \\
+     \textbf{Frameworks}{: React, Next.js, Redux, TailwindCSS, Spring Boot, Node.js, Express} \\
+     \textbf{Developer Tools}{: Git, Docker, Vite, Webpack, Firebase Authentication, Firestore, Redux Saga, Redux Thunk} \\
+     \textbf{Databases}{: PostgreSQL, MongoDB, Firestore, Google Cloud Platform, Vercel, Netlify}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
