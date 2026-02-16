@@ -41,7 +41,6 @@ dist/
 *~
 *.swp
 *.swo
-*~
 .DS_Store
 
 # Keep the main PDF outputs but ignore intermediate PDFs
