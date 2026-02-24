@@ -1,5 +1,5 @@
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -107,8 +107,7 @@
 
 \begin{center}
     \textbf{\Huge \scshape Said Altan} \\ \vspace{1pt}
-    \small Software Developer $|$ {React \& Java} $|$ 
-    {Building data-heavy, user-facing platforms} 
+   
 \end{center}
 
 \begin{center}
@@ -129,11 +128,11 @@
       {Software Developer}{Jul 2025 -- Present}
       {Arbitrage Cyclops}{Toronto, ON}
       \resumeItemListStart
-       \resumeItem{Built and maintained a responsive \textbf{React} frontend using \textbf{Redux} and Redux-Saga to handle complex filtering, pagination, and detail views for arbitrage dashboards working with \textbf{10k+} product records.}
-        \resumeItem{Introduced incremental \textbf{TypeScript} adoption for shared UI components and state slices, improving type safety and catching regressions earlier during code reviews.}
-        \resumeItem{Optimized Firestore-backed data access with indexed queries, debounced search, and memoized selectors, improving perceived responsiveness for large result sets on both desktop and mobile.}
+       \resumeItem{Built and optimized a \textbf{React + Redux} dashboard handling \textbf{10M+ product records}, improving large-dataset filtering and pagination performance across arbitrage views.}
+        \resumeItem{Led incremental \textbf{TypeScript} adoption across shared UI components and state slices, reducing runtime errors and improving code review reliability.}
+        \resumeItem{Optimized Firestore queries with indexing, debounced search, and memoized selectors to reduce unnecessary re-renders and improve responsiveness for large result sets.}
         \resumeItem{Integrated React views with \textbf{REST} endpoints and Node.js services, and contributed to deploying static assets through \textbf{AWS} (S3/CloudFront) for more reliable delivery.}
-        \resumeItem{Collaborated in an \textbf{Agile} environment using GitHub, feature branches, and pull requests, adding \textbf{Jest} unit tests and lightweight \textbf{Cypress} smoke tests for critical user flows.}
+       
       \resumeItemListEnd
       
 % -----------Multiple Positions Heading-----------
@@ -150,35 +149,47 @@
       {Web Developer Intern}{Sep 2024 -- Dec 2024}
       {Solace}{Ottawa, ON}
       \resumeItemListStart
-        \resumeItem{Developed and shipped a reusable \textbf{JavaScript}/jQuery Table of Contents component for internal knowledge bases, simplifying navigation across long content pages and increasing engagement on key articles.}
-        \resumeItem{Improved Lighthouse performance and accessibility scores to consistently reach the \textbf{90+} range by refining semantic HTML, color contrast, keyboard navigation, and responsive layout behavior.}
-        \resumeItem{Built a responsive internal microsite with \textbf{Bootstrap}, SCSS, and REST/GraphQL-based content retrieval, enabling content owners to reuse modules across multiple internal campaigns.}
-        \resumeItem{Worked closely with designers, content authors, and QA in \textbf{Agile} sprints, contributing regression checks and basic Jest tests for high-traffic pages, while resolving Node.js and pipeline issues in CI/CD.}
-    \resumeItemListEnd
+        \resumeItem{Developed and maintained production web interfaces using \textbf{JavaScript}, \textbf{HTML/CSS}, and React by shipping reusable UI components and managing component lifecycle-driven interactions, ensuring consistent behavior across content-heavy, high-traffic pages in a live environment.}
 
-    
+\resumeItem{Redesigned a complex scroll-based Table of Contents and navigation system by implementing state-driven active section management in JavaScript, resolving edge cases such as duplicate open/close events, incorrect section activation, and offset rendering issues during rapid scroll and click interactions.}
 
+\resumeItem{Designed and built a platform hosted on a company subdomain for a company-wide initiative, translating \textbf{Figma} designs into a modular, component-driven frontend with responsive \textbf{HTML/CSS}, contributing to a platform redesign that supported a \textbf{50\%} year-over-year increase in traffic.}
+
+\resumeItem{Collaborated with engineers to diagnose and resolve critical production build and deployment issues on a \textbf{Gatsby/React} platform, addressing \textbf{Node.js} and framework version incompatibilities to restore reliable builds and deployment stability.}
+
+\resumeItem{Ensured responsive layouts, cross-browser compatibility, and basic accessibility considerations using semantic HTML
+and consistent component structure.}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------
 \section{Projects}
+
     \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{\href{https://www.rolevanta.com}{Rolevanta}} $|$ \emph{Next.js, Python, FastAPI}}{}
+          \resumeItemListStart
+        \resumeItem{Architected and shipped a production-grade career application system featuring a \textbf{4-stage LLM orchestration} pipeline (JD analysis → content strategy → section drafting → ATS scoring) that converts unstructured resume data into role-specific, structured outputs.}
+        \resumeItem{Designed and implemented a scalable full-stack architecture with \textbf{FastAPI, Next.js App Router}, Supabase, and PostgreSQL, including SSR authentication, tier-based access control, async request handling, versioned data models, and secure Stripe payment processing.}
+        \resumeItem{Established production reliability and platform integrity through \textbf{600+ automated tests} (unit, integration, E2E), CI enforcement via GitHub Actions, zero-downtime schema migrations, rate limiting, input sanitization against prompt injection, and end-to-end security hardening.}
+          \resumeItemListEnd
+
+
+
+
+
+    
       \resumeProjectHeading
           {\textbf{\href{https://plab2practice.com}{PLAB2 Practice Platform}} $|$ \emph{React, TypeScript, REST APIs, PostgreSQL}}{\href{https://github.com/altansaid/plab2projectnew}{Github}}
           \resumeItemListStart
-            \resumeItem{Implemented an accessible \textbf{React + TypeScript} single-page application in strict mode, supporting Doctor/Patient/Observer roles and time-boxed consultation flows for hundreds of concurrent users.}
-        \resumeItem{Designed responsive, \textbf{WCAG}-aware UI components with Tailwind CSS and Material UI, ensuring clear layouts, keyboard-friendly navigation, and consistent behavior across breakpoints.}
+            \resumeItem{Built a React + TypeScript SPA supporting Doctor/Patient/Observer roles and time-boxed consultation flows, enabling real-time session handling for hundreds of concurrent users.}
+        \resumeItem{Designed responsive, WCAG-aware UI components with Tailwind CSS and Material UI, ensuring clear layouts, keyboard-friendly navigation, and consistent behavior across breakpoints.}
         \resumeItem{Integrated \textbf{REST} APIs and WebSocket (STOMP) endpoints from a Spring Boot backend to keep session state synchronized in under \textbf{200ms} on typical connections.}
-        \resumeItem{Added basic internationalization support (labels, messages, and date formats) to prepare the UI for multiple locales and exam regions.}
+   
           \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{\href{https://interviewcoach-ai.vercel.app/}{Interview AI}} $|$ \emph{Next.js, React, Node.js, REST APIs}}{\href{https://github.com/altansaid/interviewcoach-ai}{Github}}
-          \resumeItemListStart
-        \resumeItem{Developed an AI-powered interview practice workflow by transforming user context into structured prompts for an \textbf{LLM API}, generating \textbf{personalized} interview questions aligned to role and experience.}
-        \resumeItem{Implemented secure authentication using \textbf{JWT} and \textbf{Google OAuth}, and designed REST APIs for managing interview sets, favorites, and dashboards to support repeatable practice sessions.}
-        \resumeItem{Built persistence-backed features using \textbf{MongoDB} to store user sessions and question sets, improving \textbf{continuity} across practice sessions.}
-          \resumeItemListEnd
+
     \resumeSubHeadingListEnd
 
 
@@ -197,10 +208,10 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: JavaScript, TypeScript, HTML5, CSS3, Java, SQL} \\
-     \textbf{Frameworks}{: React, Redux, Next.js, Tailwind CSS, Material UI, Bootstrap, Node.js, Spring Boot} \\
-     \textbf{Developer Tools}{: Git, Docker, Google Cloud Platform, AWS, VS Code, Visual Studio, IntelliJ} \\
-     \textbf{Databases}{: PostgreSQL, MongoDB, MySQL}
+     \textbf{Frontend}{: React, Next.js, TypeScript, Redux, Tailwind CSS} \\
+     \textbf{Backend}{: Node.js, FastAPI, Spring Boot, REST APIs, WebSockets} \\
+     \textbf{Databases}{: PostgreSQL, MongoDB, MySQL} \\
+     \textbf{Cloud \& DevOps:}{: AWS, GCP, Docker, GitHub Actions}
     }}
  \end{itemize}
 
