@@ -1,0 +1,197 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Said Altan} \\ \vspace{1pt}
+   
+\end{center}
+
+\begin{center}
+
+    \small 343-988-3084 $|$ \href{mailto:x@x.com}{\underline{altansaid13@outlook.com}} $|$ 
+    \href{https://linkedin.com/in/altansaid}{\underline{linkedin.com/in/altansaid}} $|$
+    \href{https://github.com/altansaid}{\underline{github.com/altansaid}}
+\end{center}
+
+
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Developer}{Jul 2025 -- Present}
+      {Arbitrage Cyclops}{Remote}
+      \resumeItemListStart
+        \resumeItem{Delivered customer-focused UX improvements in a data-heavy \textbf{React 18} B2B SaaS by implementing deterministic prefetching for adjacent result pages, reducing pagination waits from \textbf{$\sim$1.5s} to near-instant navigation across large datasets.}
+        \resumeItem{Improved performance and reliability of complex filtering workflows over \textbf{1M+ records} by restructuring client-side filtering into a batched apply flow, cutting response time from \textbf{$\sim$2s} to \textbf{$<$500ms} and reducing redundant requests.}
+        \resumeItem{Maintained high-quality code under rapid user interactions by preventing race conditions in \textbf{Redux Sagas} (discarding stale responses and guarding fetch lifecycles), improving reliability of async data loading.}
+        \resumeItem{Collaborated with product owners to prioritize and deliver production fixes by validating cache correctness across filter/sort combinations and aligning frontend state with cursor-based pagination behavior exposed by \textbf{Go} services.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Web Developer Internship}{Sep 2024 -- Dec 2024}
+      {Solace}{Ottawa, Canada}
+      \resumeItemListStart
+        \resumeItem{Developed and maintained reusable, application-level UI components for large-scale web platforms, improving consistency and reducing regression issues across production pages.}
+        \resumeItem{Took ownership of a complex in-page navigation system by restructuring state-driven UI flows for long-form pages, improving usability and content discoverability for end users.}
+        \resumeItem{Diagnosed and resolved \textbf{8+} critical production issues by collaborating with engineers on root-cause analysis (framework upgrades, runtime changes, deployment workflows), restoring reliability and preventing recurring failures.}
+        \resumeItem{Improved the customer's user experience by raising \textbf{Lighthouse performance by 20+ points} and accessibility to \textbf{90+} on key pages through audit-driven frontend optimizations and quality-focused iteration.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\href{https://rolevanta.com}{\textbf{Rolevanta}} $|$ \emph{React, TypeScript, Docker, PostgreSQL}}{}
+          \resumeItemListStart
+            \resumeItem{Built an AI-powered resume tailoring SaaS with a structured 4-stage pipeline (JD analysis $\to$ strategy $\to$ section writing $\to$ ATS scoring), leveraging \textbf{AI-powered development tools} and schema-guided outputs to generate consistent, \textbf{high-quality} content.}
+            \resumeItem{Developed and maintained a \textbf{FastAPI} backend with \textbf{59 endpoints} across \textbf{9 route modules}, implementing dependency-injected auth, tier-gated access control, and non-blocking request handling for reliable API performance.}
+            \resumeItem{Improved delivery quality with unit testing across the stack (\textbf{pytest}, Vitest, Playwright) enforced via \textbf{GitHub Actions} on every pull request, supporting reliable releases and maintainable technical documentation workflows.}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\href{https://plab2practice.com}{\textbf{PLAB2 Practice Platform}} $|$ \emph{React, TypeScript, Spring Boot, Docker}}{\href{https://github.com/altansaid/plab2projectnew}{\underline{GitHub}}}
+          \resumeItemListStart
+            \resumeItem{Delivered a real-time web platform serving \textbf{220 active users} by building a \textbf{React + TypeScript} frontend and a \textbf{Spring Boot} API backend to support role-based, timed consultation sessions.}
+            \resumeItem{Implemented reliable real-time synchronization using \textbf{WebSocket} connections and server-side session state tracking to prevent drift, handle disconnects/late joins, and maintain consistent user experience under variable network conditions.}
+            \resumeItem{Deployed \textbf{Dockerized} services to a production cloud environment with monitoring to maintain reliability for a live, multi-country user base.}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+
+%
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Algonquin College of Applied Arts and Technology}{Ottawa, ON}
+      {Web Development and Internet Applications}{Sep 2023 -- April 2025}
+    
+  \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: TypeScript, JavaScript, Python, Java, SQL, PHP} \\
+     \textbf{Frameworks}{: React, Node.js, Next.js, Express, FastAPI, Spring Boot, Redux} \\
+     \textbf{Tools}{: Docker, GitHub Actions, Git, Playwright, Vitest, pytest, Jira, Figma} \\
+     \textbf{Cloud \& Databases}{: PostgreSQL, Firestore, Firebase, Supabase, Google Cloud Platform}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
