@@ -1,220 +1,117 @@
+\documentclass[11pt]{article}       % set main text size
+\usepackage[letterpaper,                % set paper size to letterpaper. change to a4paper for resumes outside of North America
+top=0.5in,                          % specify top page margin
+bottom=0.5in,                       % specify bottom page margin
+left=0.5in,                         % specify left page margin
+right=0.5in]{geometry}              % specify right page margin
+                       
+\usepackage{XCharter}               % set font. comment this line out if you want to use the default LaTeX font Computer Modern
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
 
-\documentclass[letterpaper,10pt]{article}
-
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
+% ensure PDF output will be all-Unicode and machine-readable
 \input{glyphtounicode}
-
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt} %%% Test various topsep values to fix vertical spacing errors
 
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
+% resume starts here
 \begin{document}
 
-%----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
+% name
+\centerline{\Huge Said Altan}
 
-\begin{center}
-    \textbf{\Huge \scshape Said Altan} \\ \vspace{1pt}
-   
-\end{center}
+\vspace{10pt}
 
-\begin{center}
-
-    \small 343-988-3084 $|$ \href{mailto:x@x.com}{\underline{altansaid13@outlook.com}} $|$ 
-    \href{https://linkedin.com/in/altansaid}{\underline{linkedin.com/in/altansaid}} $|$
-    \href{https://github.com/altansaid}{\underline{github.com/altansaid}}
-\end{center}
+% contact information
+\centerline{\href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} | \href{https://saidaltan.com}{saidaltan.com} | \href{https://github.com/altansaid}{github.com/altansaid} | \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid}}
 
 
+\vspace{5pt}
+% experience section
+\section*{Experience}
+\textbf{Software Developer,} {Arbitrage Cyclops} -- Toronto, ON \hfill Jan 2025 -- Present \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Reduced filter response time from 2s to under 500ms on 1M+ record datasets by restructuring client-side filtering into a batched apply flow
+  \item Increased arbitrage accuracy to 95\% across ROI, fees, and sales-velocity estimates by integrating Amazon SP-API and Keepa API with custom profit calculations
+  \item Built a responsive UI layer over a backend pipeline that filters 800M+ products monthly to 1M eligible results, keeping large datasets fluid with Redux-Saga, debounced search, pagination, and indexed Firestore queries
+  \item Accelerated feature delivery by integrating AI-assisted development tools (Claude Code, Cursor) into daily workflow for scaffolding, refactoring, and test generation
+
+\end{itemize}
 
 
-%-----------EXPERIENCE-----------
-\section{Experience}
-  \resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Software Developer}{April 2025 -- Present}
-      {Arbitrage Cyclops}{Toronto, ON}
-      \resumeItemListStart
-       \resumeItem{Built and optimized a \textbf{React + Redux} dashboard handling \textbf{10M+ product records}, improving large-dataset filtering and pagination performance across arbitrage views.}
-        \resumeItem{Led incremental \textbf{TypeScript} adoption across shared UI components and state slices, reducing runtime errors and improving code review reliability.}
-        \resumeItem{Optimized Firestore queries with indexing, debounced search, and memoized selectors to reduce unnecessary re-renders and improve responsiveness for large result sets.}
-        \resumeItem{Integrated React views with \textbf{REST} endpoints and Node.js services, and contributed to deploying static assets through \textbf{AWS} (S3/CloudFront) for more reliable delivery.}
-       
-      \resumeItemListEnd
-      
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
+\textbf{Web Developer Intern,} {Solace} -- Ottawa, ON \hfill Sep 2024 -- Dec 2024 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Designed, built, and deployed a company-wide internal web platform from the ground up, replacing a legacy structure reused across prior years and driving a 50\% year-over-year traffic increase
+  \item Rebuilt an outdated, buggy blog table-of-contents plugin from scratch, adding collapsible nested-heading navigation and smooth scrolling to fix broken section tracking and enable seamless reader navigation
+  \item Reduced repeated one-off work across multiple production sites by building reusable components and plugins, replacing duplicated implementations with shared modules used by content teams
 
-    \resumeSubheading
-      {Web Developer Intern}{Sep 2024 -- Dec 2024}
-      {Solace}{Ottawa, ON}
-      \resumeItemListStart
-        \resumeItem{Developed and maintained production web interfaces using \textbf{JavaScript}, \textbf{HTML/CSS}, and React by shipping reusable UI components and managing component lifecycle-driven interactions, ensuring consistent behavior across content-heavy, high-traffic pages in a live environment.}
+\end{itemize}
 
-\resumeItem{Redesigned a complex scroll-based Table of Contents and navigation system by implementing state-driven active section management in JavaScript, resolving edge cases such as duplicate open/close events, incorrect section activation, and offset rendering issues during rapid scroll and click interactions.}
+\vspace{-10.5pt}
 
-\resumeItem{Designed and built a platform hosted on a company subdomain for a company-wide initiative, translating \textbf{Figma} designs into a modular, component-driven frontend with responsive \textbf{HTML/CSS}, contributing to a platform redesign that supported a \textbf{50\%} year-over-year increase in traffic.}
-
-\resumeItem{Collaborated with engineers to diagnose and resolve critical production build and deployment issues on a \textbf{Gatsby/React} platform, addressing \textbf{Node.js} and framework version incompatibilities to restore reliable builds and deployment stability.}
-
-\resumeItem{Ensured responsive layouts, cross-browser compatibility, and basic accessibility considerations using semantic HTML
-and consistent component structure.}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
-
-
-%-----------PROJECTS-----------
-\section{Projects}
-
-    \resumeSubHeadingListStart
-
-      \resumeProjectHeading
-          {\textbf{\href{https://www.rolevanta.com}{Rolevanta}} $|$ \emph{Next.js, Python, FastAPI}}{}
-          \resumeItemListStart
-        \resumeItem{Architected and shipped a production-grade career application system featuring a \textbf{4-stage LLM orchestration} pipeline (JD analysis → content strategy → section drafting → ATS scoring) that converts unstructured resume data into role-specific, structured outputs.}
-        \resumeItem{Designed and implemented a scalable full-stack architecture with \textbf{FastAPI, Next.js App Router}, Supabase, and PostgreSQL, including SSR authentication, tier-based access control, async request handling, versioned data models, and secure Stripe payment processing.}
-        \resumeItem{Established production reliability and platform integrity through \textbf{600+ automated tests} (unit, integration, E2E), CI enforcement via GitHub Actions, zero-downtime schema migrations, rate limiting, input sanitization against prompt injection, and end-to-end security hardening.}
-          \resumeItemListEnd
+% skills section
+\section*{Skills}
+\textbf{Languages:} TypeScript, JavaScript, Java, Python, SQL \\
+\textbf{Frontend:} React, Next.js, Redux, Tailwind CSS, HTML5, CSS3 \\
+\textbf{Backend \& Databases:} Node.js, FastAPI, Spring Boot, PostgreSQL, MongoDB, Firestore \\
+\textbf{Tools \& Platforms:} Docker, Git, GitHub Actions, GCP, AWS, Claude Code, n8n
+\vspace{-5pt}
 
 
 
 
-
-    
-      \resumeProjectHeading
-          {\textbf{\href{https://plab2practice.com}{PLAB2 Practice Platform}} $|$ \emph{React, TypeScript, REST APIs, PostgreSQL}}{\href{https://github.com/altansaid/plab2projectnew}{Github}}
-          \resumeItemListStart
-            \resumeItem{Built a React + TypeScript SPA supporting Doctor/Patient/Observer roles and time-boxed consultation flows, enabling real-time session handling for hundreds of concurrent users.}
-        \resumeItem{Designed responsive, WCAG-aware UI components with Tailwind CSS and Material UI, ensuring clear layouts, keyboard-friendly navigation, and consistent behavior across breakpoints.}
-        \resumeItem{Integrated \textbf{REST} APIs and WebSocket (STOMP) endpoints from a Spring Boot backend to keep session state synchronized in under \textbf{200ms} on typical connections.}
-   
-          \resumeItemListEnd
-
-    \resumeSubHeadingListEnd
+% \textbf{Job Title,} \href{https://www.fstl1992.com/}{Company} -- City, ST \hfill XXXX -- XXXX \\
+% \vspace{-9pt}
 
 
+% projects section
+\section*{Projects}
+\textbf{Rolevanta} \hfill \href{https://rolevanta.com}{rolevanta.com} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Architected and shipped a full-stack AI resume platform solo in 3 months, spanning an async FastAPI backend, a React editor with drag-and-drop reordering and real-time preview, and a multi-stage AI pipeline
+  \item Drove organic traffic to 1,200 monthly visitors within 2 months of launch by architecting a programmatic SEO system spanning 350 statically pre-rendered pages
+  \item Established a 620-test suite across unit, component, and end-to-end layers enforced in CI on every pull request
+\end{itemize}
 
-%
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Algonquin College of Applied Arts and Technology}{Ottawa, ON}
-      {Web Development and Internet Applications}{Sep 2023 -- April 2025}
-    
-  \resumeSubHeadingListEnd
-
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Frontend}{: React, Next.js, TypeScript, Redux, Tailwind CSS} \\
-     \textbf{Backend}{: Node.js, FastAPI, Spring Boot, REST APIs, WebSockets} \\
-     \textbf{Databases}{: PostgreSQL, MongoDB, MySQL} \\
-     \textbf{Cloud \& DevOps:}{: AWS, GCP, Docker, GitHub Actions}
-    }}
- \end{itemize}
+\textbf{Plab2 Practice} \hfill \href{https://plab2practice.com}{plab2practice.com} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Architected a STOMP WebSocket engine synchronizing 5 session phases across 3 participant roles with a drift-free shared-timestamp timer that eliminated per-second traffic for every participant
+  \item Developed a Spring Boot REST API on Java 21 spanning 9 controllers and 6 JPA entities behind a real-time platform serving 300+ active users across multiple countries
+  \item Built thread-safe session coordination with a 10-thread scheduled executor and 4 concurrent maps tracking timers, tasks, activity, and disconnect timeouts to keep sessions consistent under load
+\end{itemize}
 
 
-%-------------------------------------------
+% alternate formatting for projects section
+% \section*{Projects}
+% \begin{itemize}
+%   \item \textbf{QuantSoftware Toolkit:} Open source Python library for data analysis and machine learning for finance
+%   \item \textbf{GitHub Visualization:} Data visualization of Git Log data using D3 to analyze project trends over time
+%   \item \textbf{Recommendation System:} Music and movie recommender systems using collaborative filtering on public datasets
+%   \item \textbf{Mac Setup:} Book that gives step by step instructions on setting up developer environment on Mac OS
+% \end{itemize}
+
+
+
+% education section
+\section*{Education}
+\textbf{Algonquin College of Applied Arts and Technology} -- Web Development and Internet Applications
+\hfill Apr 2025 \\
+
+
 \end{document}
