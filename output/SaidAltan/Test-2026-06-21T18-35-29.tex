@@ -1,0 +1,103 @@
+\documentclass[11pt]{article}       % set main text size
+\usepackage[letterpaper,                % set paper size to letterpaper. change to a4paper for resumes outside of North America
+top=0.5in,                          % specify top page margin
+bottom=0.5in,                       % specify bottom page margin
+left=0.5in,                         % specify left page margin
+right=0.5in]{geometry}              % specify right page margin
+                       
+\usepackage{XCharter}               % set font. comment this line out if you want to use the default LaTeX font Computer Modern
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
+
+% ensure PDF output will be all-Unicode and machine-readable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt} %%% Test various topsep values to fix vertical spacing errors
+
+\newcommand{\resumeSubheading}[4]{
+\textbf{#1,} {#3} -- #4 \hfill #2 \\
+\vspace{-9pt}
+}
+
+\newcommand{\resumeItem}[1]{
+  \item #1
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+\textbf{#1} \hfill #2 \\
+\vspace{-9pt}
+}
+
+% resume starts here
+\begin{document}
+
+% name
+\centerline{\Huge Said Altan}
+
+\vspace{10pt}
+
+% contact information
+\centerline{\href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} | \href{https://saidaltan.com}{saidaltan.com} | \href{https://github.com/altansaid}{github.com/altansaid} | \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid}}
+
+\vspace{5pt}
+% experience section
+\section*{Experience}
+\resumeSubheading{Software Developer}{2025-01 - Present}{Arbitrage Cyclops}{Remote}
+\begin{itemize}
+  \resumeItem{Contributed to core product features in a fast-paced B2B SaaS application by building and improving \textbf{React}-based user-facing workflows for exploring \textbf{1M+ product records}, reducing filter response time from 2s to under 500ms.}
+  \resumeItem{Improved end-to-end data flow between frontend features and backend APIs by implementing deterministic prefetching and cache validation tied to filter state, cutting pagination delays from \textbf{1.5s} to \textbf{near-instant navigation}.}
+  \resumeItem{Debugged production issues affecting filtering and pagination by coordinating Redux Saga fetch lifecycles with backend cursor behavior, preventing stale responses and improving reliability under rapid user interactions.}
+  \resumeItem{Collaborated with product stakeholders to turn high-friction workflows into shipped improvements, balancing speed and quality while validating fixes through rapid iteration on real user-facing features.}
+\end{itemize}
+
+\resumeSubheading{Web Developer Internship}{2024-09 - 2024-12}{Solace}{Ottawa, Canada}
+\begin{itemize}
+  \resumeItem{Contributed to real products on production web platforms by developing reusable \textbf{JavaScript} and \textbf{TypeScript} components that improved consistency across interactive user-facing features and reduced regression issues.}
+  \resumeItem{Built and shipped a custom internal web platform by translating Figma designs into dynamic, configurable frontend features, collaborating with engineering and business stakeholders to deliver value to multiple teams.}
+  \resumeItem{Debugged and resolved \textbf{8+ critical production issues} related to framework upgrades, runtime changes, and deployment workflows, helping maintain \textbf{reliable production systems} in a fast-paced environment.}
+  \resumeItem{Improved engineering quality through performance and accessibility work, raising Lighthouse performance scores by \textbf{20+ points} and accessibility scores to \textbf{90+} across key pages through testing and iterative frontend improvements.}
+\end{itemize}
+
+\vspace{-10.5pt}
+
+% skills section
+\section*{Skills}
+\textbf{Languages:} JavaScript, TypeScript, SQL, Python, Java, PHP \\
+\textbf{Frameworks:} React, Node.js, Next.js, FastAPI, Spring Boot, Redux, Tailwind CSS, REST APIs \\
+\textbf{Tools:} Git, CI/CD, GitHub Actions, Docker, Playwright, Vitest, pytest, Figma \\
+\textbf{Cloud \& Databases:} PostgreSQL, Supabase, Firestore, Firebase, Google Cloud Platform, Vercel
+\vspace{-5pt}
+
+% projects section
+\section*{Projects}
+\resumeProjectHeading{\href{https://rolevanta.com}{\textbf{Rolevanta}} $|$ \emph{TypeScript, React, PostgreSQL, FastAPI}}{}
+\begin{itemize}
+  \resumeItem{Designed and built an end-to-end fullstack SaaS product that turns job descriptions into tailored resumes through a \textbf{4-stage AI workflow}, delivering real user-facing features across frontend, backend services, APIs, and database-backed resume management.}
+  \resumeItem{Built backend services and APIs across \textbf{59 endpoints} with structured authentication, tier-gated access control, and asynchronous request handling, while evolving a \textbf{PostgreSQL} schema through 14 migrations to support versioning, restore flows, and scalable data modeling.}
+  \resumeItem{Participated in engineering quality and continuous improvement by establishing a \textbf{620+ test suite} with GitHub Actions CI, covering backend logic, frontend components, and end-to-end user flows for reliable feature delivery.}
+\end{itemize}
+
+\resumeProjectHeading{\href{https://plab2practice.com}{\textbf{PLAB2 Practice Platform}} $|$ \emph{React, TypeScript, PostgreSQL, REST APIs}}{\href{https://github.com/altansaid/plab2projectnew}{\underline{GitHub}}}
+\begin{itemize}
+  \resumeItem{Built an end-to-end fullstack practice platform used by \textbf{220 active users}, developing user-facing features and backend workflows that enabled real-time, role-based clinical exam sessions for distributed users.}
+  \resumeItem{Developed backend services and APIs across \textbf{60+ REST endpoints} and integrated them with a \textbf{React and TypeScript} frontend, supporting secure authentication, session management, and reliable coordination of timed multi-user workflows.}
+  \resumeItem{Deployed the application with Docker to a live cloud environment and iterated on shipped features using feedback from real users, improving session flow, mobile usability, and production reliability.}
+\end{itemize}
+
+% education section
+\section*{Education}
+\textbf{Algonquin College of Applied Arts and Technology} -- Web Development and Internet Applications
+\hfill Apr 2025 \\
+
+\end{document}
