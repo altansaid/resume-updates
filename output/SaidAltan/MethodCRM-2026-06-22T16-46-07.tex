@@ -1,0 +1,112 @@
+\documentclass[11pt]{article}       % set main text size
+\usepackage[letterpaper,                % set paper size to letterpaper. change to a4paper for resumes outside of North America
+top=0.5in,                          % specify top page margin
+bottom=0.5in,                       % specify bottom page margin
+left=0.5in,                         % specify left page margin
+right=0.5in]{geometry}              % specify right page margin
+                       
+\usepackage{XCharter}               % set font. comment this line out if you want to use the default LaTeX font Computer Modern
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
+
+% ensure PDF output will be all-Unicode and machine-readable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt} %%% Test various topsep values to fix vertical spacing errors
+
+% resume starts here
+\begin{document}
+
+% name
+\centerline{\Huge Said Altan}
+
+\vspace{10pt}
+
+% contact information
+\centerline{\href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} | \href{https://saidaltan.com}{saidaltan.com} | \href{https://github.com/altansaid}{github.com/altansaid} | \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid}}
+
+
+\vspace{5pt}
+% experience section
+\section*{Experience}
+\textbf{Software Developer,} {Arbitrage Cyclops} -- Toronto, ON \hfill Jan 2025 -- Present \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Shipped data-heavy React and TypeScript product improvements across the full user journey, reducing filter response time from 2s to under 500ms on 1M+ record datasets by restructuring client-side filtering into a batched apply flow.
+  \item Owned performance-focused feature delivery for a top-of-funnel style search experience, reducing backend requests by 40\% while keeping 700k records responsive through Redux Saga, debounced search, pagination, and indexed Firestore queries.
+  \item Used AI coding tools in a trust-and-verify workflow for scaffolding, refactoring, and test generation, accelerating feature delivery while maintaining ownership of shipped output.
+\end{itemize}
+
+\textbf{Web Developer Intern,} {Solace} -- Ottawa, ON \hfill Sep 2024 -- Dec 2024 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Designed, built, and deployed a company-wide internal web platform end-to-end, replacing a legacy structure and supporting a 50\% year-over-year traffic increase through reliable production delivery.
+  \item Improved early user experience and software simplicity by rebuilding a buggy blog table-of-contents plugin from scratch, adding collapsible nested navigation and smooth scrolling to restore accurate section tracking.
+  \item Diagnosed and resolved 8+ critical production issues tied to framework upgrades and deployment workflows, escalating risk early and restoring build stability to support frequent releases.
+\end{itemize}
+
+\vspace{-10.5pt}
+
+% skills section
+\section*{Skills}
+\textbf{Languages:} TypeScript, JavaScript, Java, Python, SQL, PHP \\
+\textbf{Frontend:} React, TypeScript, Redux, Next.js, Tailwind CSS, JavaScript \\
+\textbf{Backend \& Databases:} MongoDB, PostgreSQL, Firestore, FastAPI, Spring Boot, Node.js, Express, WebSocket \\
+\textbf{Tools \& Platforms:} AWS, Docker, GitHub Actions, CI/CD, Playwright, Vitest, Claude Code
+\vspace{-5pt}
+
+
+
+
+% \textbf{Job Title,} \href{https://www.fstl1992.com/}{Company} -- City, ST \hfill XXXX -- XXXX \\
+% \vspace{-9pt}
+
+
+% projects section
+\section*{Projects}
+\textbf{Rolevanta} \hfill \href{https://rolevanta.com}{rolevanta.com} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Architected and shipped a full-stack SaaS product solo in 3 months using React, FastAPI, and PostgreSQL, owning delivery from planning through production for an AI-powered resume tailoring platform.
+  \item Built an async backend serving 59 API endpoints with tier-gated access control and evolved the relational database through 14 zero-downtime migrations, supporting reliable resume versioning and restore workflows.
+  \item Wrote automated tests alongside implementation by establishing a 620-test suite across unit, component, and end-to-end layers, enforced in CI on every pull request to validate changes before release.
+\end{itemize}
+
+\textbf{Plab2 Practice} \hfill \href{https://plab2practice.com}{plab2practice.com} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Built and shipped a full-stack real-time web platform with React, Spring Boot, and WebSocket support, serving 300+ active users across multiple countries with reliable session coordination.
+  \item Developed a Spring Boot REST API spanning 9 controllers and 6 JPA entities, demonstrating API design, ORM-based backend development, and production ownership across core user and admin flows.
+  \item Operated Dockerized production services with uptime monitoring and role-based authentication, helping maintain a dependable customer experience while supporting ongoing usage in a live environment.
+\end{itemize}
+
+
+% alternate formatting for projects section
+% \section*{Projects}
+% \begin{itemize}
+%   \item \textbf{QuantSoftware Toolkit:} Open source Python library for data analysis and machine learning for finance
+%   \item \textbf{GitHub Visualization:} Data visualization of Git Log data using D3 to analyze project trends over time
+%   \item \textbf{Recommendation System:} Music and movie recommender systems using collaborative filtering on public datasets
+%   \item \textbf{Mac Setup:} Book that gives step by step instructions on setting up developer environment on Mac OS
+% \end{itemize}
+
+
+
+% education section
+\section*{Education}
+\textbf{Algonquin College of Applied Arts and Technology} -- Web Development and Internet Applications
+\hfill Apr 2025 \\
+
+
+\end{document}
