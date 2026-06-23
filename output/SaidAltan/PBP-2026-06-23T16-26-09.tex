@@ -1,0 +1,112 @@
+\documentclass[11pt]{article}       % set main text size
+\usepackage[letterpaper,                % set paper size to letterpaper. change to a4paper for resumes outside of North America
+top=0.5in,                          % specify top page margin
+bottom=0.5in,                       % specify bottom page margin
+left=0.5in,                         % specify left page margin
+right=0.5in]{geometry}              % specify right page margin
+                       
+\usepackage{XCharter}               % set font. comment this line out if you want to use the default LaTeX font Computer Modern
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
+
+% ensure PDF output will be all-Unicode and machine-readable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt} %%% Test various topsep values to fix vertical spacing errors
+
+% resume starts here
+\begin{document}
+
+% name
+\centerline{\Huge Said Altan}
+
+\vspace{10pt}
+
+% contact information
+\centerline{\href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} | \href{https://saidaltan.com}{saidaltan.com} | \href{https://github.com/altansaid}{github.com/altansaid} | \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid}}
+
+
+\vspace{5pt}
+% experience section
+\section*{Experience}
+\textbf{Software Developer,} {Arbitrage Cyclops} -- Toronto, ON \hfill Jan 2025 -- Present \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Built data-heavy product discovery features over 1M+ records, reducing filter response time from 2s to under 500ms by restructuring the workflow into a batched apply flow that kept large datasets responsive.
+  \item Integrated external commerce APIs including Amazon SP-API and Keepa API to support more accurate product intelligence, increasing arbitrage accuracy to 95\% across ROI, fees, and sales-velocity estimates.
+  \item Supported a backend pipeline that processes 800M+ products monthly into 1M eligible results, helping ship meaningful discovery workflows for independent brands through responsive filtering and sorting experiences.
+\end{itemize}
+
+\textbf{Web Developer Intern,} {Solace} -- Ottawa, ON \hfill Sep 2024 -- Dec 2024 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Designed, built, and deployed a company-wide internal platform from the ground up, taking high ownership of delivery and replacing a legacy structure that contributed to a 50\% year-over-year traffic increase.
+  \item Built reusable components and plugins used across multiple production sites, reducing repeated one-off implementation work and improving maintainability in a fast-moving environment.
+  \item Diagnosed and resolved 8+ critical production issues tied to framework upgrades and deployment workflows, restoring release stability and supporting continuous improvement across production systems.
+\end{itemize}
+
+\vspace{-10.5pt}
+
+% skills section
+\section*{Skills}
+\textbf{Languages:} Java, Python, TypeScript, SQL, JavaScript, PHP \\
+\textbf{Frontend:} Next.js, React, Redux, Redux Saga, Tailwind CSS, HTML5 \\
+\textbf{Backend \& Databases:} Spring Boot, PostgreSQL, REST APIs, FastAPI, Node.js, WebSocket, JWT, Firestore \\
+\textbf{Tools \& Platforms:} AWS, Docker, CI/CD, GitHub Actions, Git, Supabase, Claude Code
+\vspace{-5pt}
+
+
+
+
+% \textbf{Job Title,} \href{https://www.fstl1992.com/}{Company} -- City, ST \hfill XXXX -- XXXX \\
+% \vspace{-9pt}
+
+
+% projects section
+\section*{Projects}
+\textbf{Plab2 Practice} \hfill \href{https://plab2practice.com}{plab2practice.com} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Developed scalable backend services and APIs in Java 21 and Spring Boot, delivering 9 controllers and 6 JPA entities for a real-time platform serving 300+ active users across multiple countries.
+  \item Owned backend feature delivery from data model through production deployment by building JWT-secured APIs, role-based access control, and thread-safe session coordination for consistent real-time behavior under load.
+  \item Deployed Dockerized services to a production cloud environment with uptime monitoring, contributing to reliable infrastructure for a hands-on product used continuously by medical graduates.
+\end{itemize}
+
+\textbf{Rolevanta} \hfill \href{https://rolevanta.com}{rolevanta.com} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Architected and shipped an AI-powered resume platform solo in 3 months, combining an async FastAPI backend, PostgreSQL, and a multi-stage AI pipeline to deliver AI-native features end to end.
+  \item Built an async backend serving 59 endpoints and evolved a PostgreSQL schema through 14 zero-downtime migrations, demonstrating strong ownership of APIs, data modeling, and production reliability.
+  \item Hardened production systems with per-endpoint rate limiting, prompt-injection input sanitization, CORS allowlisting, and idempotent Stripe webhook verification to improve trust and deployment readiness.
+\end{itemize}
+
+
+% alternate formatting for projects section
+% \section*{Projects}
+% \begin{itemize}
+%   \item \textbf{QuantSoftware Toolkit:} Open source Python library for data analysis and machine learning for finance
+%   \item \textbf{GitHub Visualization:} Data visualization of Git Log data using D3 to analyze project trends over time
+%   \item \textbf{Recommendation System:} Music and movie recommender systems using collaborative filtering on public datasets
+%   \item \textbf{Mac Setup:} Book that gives step by step instructions on setting up developer environment on Mac OS
+% \end{itemize}
+
+
+
+% education section
+\section*{Education}
+\textbf{Algonquin College of Applied Arts and Technology} -- Web Development and Internet Applications
+\hfill Apr 2025 \\
+
+
+\end{document}
