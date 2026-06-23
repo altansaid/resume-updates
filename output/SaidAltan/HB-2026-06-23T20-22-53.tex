@@ -1,0 +1,112 @@
+\documentclass[11pt]{article}       % set main text size
+\usepackage[letterpaper,                % set paper size to letterpaper. change to a4paper for resumes outside of North America
+top=0.5in,                          % specify top page margin
+bottom=0.5in,                       % specify bottom page margin
+left=0.5in,                         % specify left page margin
+right=0.5in]{geometry}              % specify right page margin
+                       
+\usepackage{XCharter}               % set font. comment this line out if you want to use the default LaTeX font Computer Modern
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
+
+% ensure PDF output will be all-Unicode and machine-readable
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt} %%% Test various topsep values to fix vertical spacing errors
+
+% resume starts here
+\begin{document}
+
+% name
+\centerline{\Huge Said Altan}
+
+\vspace{10pt}
+
+% contact information
+\centerline{\href{mailto:altansaid13@outlook.com}{altansaid13@outlook.com} | \href{https://saidaltan.com}{saidaltan.com} | \href{https://github.com/altansaid}{github.com/altansaid} | \href{https://www.linkedin.com/in/altansaid}{linkedin.com/in/altansaid}}
+
+
+\vspace{5pt}
+% experience section
+\section*{Experience}
+\textbf{Software Developer,} {Arbitrage Cyclops} -- Toronto, ON \hfill Jan 2025 -- Present \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Built a responsive front-end system for data-heavy workflows, creating an intuitive UI over a pipeline that filters 800M+ products monthly into 1M eligible results while keeping large datasets fluid under heavy filtering and sorting.
+  \item Applied modern front-end performance optimization to reduce filter response time from 2s to under 500ms on 1M+ record datasets by restructuring client-side filtering into a batched apply flow.
+  \item Created production-facing live data workflows that reduced backend requests by 40\% while keeping 700k records responsive through Redux-Saga, debounced search, pagination, and indexed Firestore queries.
+\end{itemize}
+
+\textbf{Web Developer Intern,} {Solace} -- Ottawa, ON \hfill Sep 2024 -- Dec 2024 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Built and deployed a modern internal web platform from the ground up, taking real ownership early on to replace a legacy structure and drive a 50\% year-over-year traffic increase.
+  \item Created reusable front-end components and plugins used across multiple production sites, reducing repeated one-off work and helping shape a more scalable, low-bureaucracy development workflow.
+  \item Applied performance tuning and modern engineering best practices to improve Lighthouse scores by 20+ points and raise accessibility to 90+ across key pages.
+\end{itemize}
+
+\vspace{-10.5pt}
+
+% skills section
+\section*{Skills}
+\textbf{Languages:} TypeScript, Python, JavaScript, Java, SQL \\
+\textbf{Frontend:} React, Next.js, Redux, Redux Saga, Tailwind CSS, Sass \\
+\textbf{Backend \& Databases:} WebSocket, FastAPI, Spring Boot, PostgreSQL, Firestore, Node.js, Express, MongoDB \\
+\textbf{Tools \& Platforms:} Git, Docker, GitHub Actions, AWS, GCP, Vercel, Supabase
+\vspace{-5pt}
+
+
+
+
+% \textbf{Job Title,} \href{https://www.fstl1992.com/}{Company} -- City, ST \hfill XXXX -- XXXX \\
+% \vspace{-9pt}
+
+
+% projects section
+\section*{Projects}
+\textbf{Rolevanta} \hfill \href{https://rolevanta.com}{rolevanta.com} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Built a polished Next.js and React product solo in 3 months, including a drag-and-drop editor with real-time preview that demonstrates ownership of production-grade front-end delivery.
+  \item Created a modern front-end experience for a multi-stage AI workflow, translating complex backend processing into intuitive user interfaces for resume tailoring.
+  \item Architected a programmatic SEO system across 350 statically pre-rendered pages, helping power growth to 1,200 monthly visitors within 2 months of launch.
+\end{itemize}
+
+\textbf{Plab2 Practice} \hfill \href{https://plab2practice.com}{plab2practice.com} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Built a real-time platform with React and WebSocket-based session updates, creating live data workflows for 300+ active users across multiple countries.
+  \item Architected a STOMP WebSocket engine that synchronized 5 session phases across 3 participant roles with a drift-free shared-timestamp timer, eliminating per-second traffic for every participant.
+  \item Developed separate user and admin dashboard flows with JWT-based access control, contributing to interactive dashboards and reliable session management in a fast-moving production environment.
+\end{itemize}
+
+
+% alternate formatting for projects section
+% \section*{Projects}
+% \begin{itemize}
+%   \item \textbf{QuantSoftware Toolkit:} Open source Python library for data analysis and machine learning for finance
+%   \item \textbf{GitHub Visualization:} Data visualization of Git Log data using D3 to analyze project trends over time
+%   \item \textbf{Recommendation System:} Music and movie recommender systems using collaborative filtering on public datasets
+%   \item \textbf{Mac Setup:} Book that gives step by step instructions on setting up developer environment on Mac OS
+% \end{itemize}
+
+
+
+% education section
+\section*{Education}
+\textbf{Algonquin College of Applied Arts and Technology} -- Web Development and Internet Applications
+\hfill Apr 2025 \\
+
+
+\end{document}
